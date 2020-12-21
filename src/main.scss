@@ -1,0 +1,8 @@
+@import "./foundation/styles/fonts.scss";
+
+$color-text : #ff0000;
+
+.red {
+    color: $color-text;
+    font-family: 'Mark-Pro-Regular';
+}
