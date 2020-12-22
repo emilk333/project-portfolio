@@ -54,18 +54,9 @@ module.exports = {
                 }
             },
             {
-                test: /\.(gif|png|jpg|svg)(\?.*$|$)/,
-                use: [
-                  {
-                    loader: 'url-loader',
-                    options: {
-                      limit: 8192,
-                      name: '[name].[ext]',
-                      publicPath: 'images/'
-                    },
-                  },
-                ],
-              },
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            },
         ]
     },
     plugins: [

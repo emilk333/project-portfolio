@@ -37,6 +37,11 @@
     text-transform: uppercase;
 }
 
+@mixin text-light {
+    font-family: "Helvetica-Neue-Light", Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+}
+
 @mixin no-typography-spacing {
     padding: 0;
     margin: 0;

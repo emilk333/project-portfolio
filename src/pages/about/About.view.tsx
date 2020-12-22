@@ -4,6 +4,7 @@ import LinkedinSVG from '../../foundation/javascript/svg/linkedin-svg'
 import LocationSVG from '../../foundation/javascript/svg/location-svg'
 import MailSVG from '../../foundation/javascript/svg/mail-svg'
 import ToolsAndSkills from '../../components/tools-and-skills/ToolsAndSkills.view'
+import IToolsAndSkill from '../../components/tools-and-skills/ToolsAndSkillInterface'
 
 const About = () => {
     const toolsAndSkillsConfig = [
@@ -15,8 +16,12 @@ const About = () => {
                     name: "Adobe experience design"
                 },
                 {
-                    svg: "adobePhotoshop",
+                    svg: "adobePS",
                     name: "Adobe Photoshop"
+                },
+                {
+                    svg: "zeplin",
+                    name: "Zeplin"
                 }
             ]
         },
@@ -26,6 +31,22 @@ const About = () => {
                 {
                     svg: "react",
                     name: "React bro"
+                },
+                {
+                    svg: "vue",
+                    name: "Vue"
+                },
+                {
+                    svg: "sass",
+                    name: "SCSS (BEM)"
+                },
+                {
+                    svg: "webpack",
+                    name: "Webpack"
+                },
+                {
+                    svg: "javascript",
+                    name: "Javascript (+ES6)"
                 }
             ]
         },
@@ -39,6 +60,7 @@ const About = () => {
             ]
         }
     ]
+
     return (
         <div className="pf-about">
             <section className="pf-about__wrapper">
@@ -76,11 +98,10 @@ const About = () => {
                     <p className="pf-about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.</p>
                 </section>
             </section>
-
+            <div className="pf-shapes__line pf-shapes__line--small-space"></div>
             <section className="pf-about__wrapper">
-                <div className="pf-shapes__line pf-shapes__line--small-space"></div>
-                <div>
-                    {toolsAndSkillsConfig.map((item, index) => <ToolsAndSkills config={item} key={index}/> )}
+                <div className="pf-tools-and-skills__wrapper">
+                    {toolsAndSkillsConfig.map((item:IToolsAndSkill, index) => <ToolsAndSkills key={index} title={item.title} content={item.content}/> )}
                 </div>
             </section>
         </div>

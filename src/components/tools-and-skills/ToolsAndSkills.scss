@@ -1,4 +1,40 @@
 
 .pf-tools-and-skills {
+    width: calc(100% / 3);
+    margin-top: 15rem;
 
+    &__wrapper {
+        width: 100%;
+        display: flex;
+    }
+
+    &__title {
+        @include label-text;
+        font-size: 1.6rem;
+        @include no-typography-spacing;
+        color: $color-dark-blue-1;
+        text-transform: uppercase;
+    }
+
+    &__list-container {
+        margin-top: 2rem;
+        padding-left: 1rem;
+    }
+
+    &__list-item {
+        margin-bottom: 0.25rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__list-item-text {
+        @include text-light;
+        color: $color-dark-blue-1;
+        padding-left: 1.5rem;
+    }
+
+    &__icon-img {
+        height: auto;
+        width: 2.8rem;
+    }
 }
