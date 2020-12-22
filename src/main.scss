@@ -1,8 +1,23 @@
-@import "./foundation/styles/fonts.scss";
 
-$color-text : #ff0000;
+// FOUNDATION
+@import "./foundation/styles/normalize";
+@import "./foundation/styles/variables";
+@import "./foundation/styles/fonts";
+@import "./foundation/styles/typography";
+@import "./foundation/styles/containers-and-spacing";
+@import "./foundation/styles/general-animations";
+@import "./foundation/styles/shapes";
 
-.red {
-    color: $color-text;
-    font-family: 'Mark-Pro-Regular';
+// COMPONENTS 
+@import "./components/navigation/Navigation";
+
+
+
+
+
+
+// LINK STYLING 
+a {
+    text-decoration: none;
+    color: currentColor;
 }

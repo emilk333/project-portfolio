@@ -1,6 +1,37 @@
+
+html { font-size: 10px; }
+
 @font-face {
-    font-family: "Mark-Pro-Regular";
-    src: url("./assets/fonts/FontFont_FF.Mark.Pro.otf") format("opentype");
+    font-family: "Mark-Pro-Heavy";
+    src: url("./assets/fonts/Mark-Pro-Heavy.otf") format("opentype");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Mark-Pro-Heavy-Italic";
+    src: url("./assets/fonts/Mark-Pro-Heavy-Italic.otf") format("opentype");
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Helvetica-Neue";
+    src: url("./assets/fonts/HelveticaNeue.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Helvetica-Neue-Light";
+    src: url("./assets/fonts/HelveticaNeue-Light.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Helvetica-Neue-Cond-Bold";
+    src: url("./assets/fonts/HelveticaNeue-CondBold.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }

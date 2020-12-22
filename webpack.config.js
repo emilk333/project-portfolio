@@ -5,16 +5,20 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
     mode: 'development',
+    devtool: 'inline-source-map',
     devServer: {
         contentBase: path.join(__dirname, 'public'),
         compress: true,
         port: 1337,
         hot: true
     },
-    entry: './src/index.js',
+    entry: './src/index.tsx',
     output: {
         path: path.resolve(__dirname, 'public'),
         filename: 'bundle.[hash].js'
+    },
+    resolve: {
+        extensions: [ '.tsx', '.ts', '.js' ],
     },
     module: {
         rules: [
@@ -29,6 +33,11 @@ module.exports = {
                         ]
                     }
                 }
+            },
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
             },
             {
                 test: /\.scss$/,

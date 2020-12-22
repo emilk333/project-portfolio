@@ -1,0 +1,21 @@
+
+@mixin heading-type-small {}
+
+@mixin heading-type-medium {}
+
+@mixin heading-type-large {}
+
+@mixin text {}
+
+@mixin label-text {}
+
+@mixin navigation-text {
+    font-family: 'Helvetica-Neue-Cond-Bold', Helvetica, sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+@mixin no-typoegraphy-spacing {
+    padding: 0;
+    margin: 0;
+}
