@@ -23,7 +23,7 @@ const Frontpage = () => {
                 <section className="pf-frontpage__layer">
                     <button className="pf-button pf-button--svg">
                         See my work
-                    <div className="pf-frontpage__arrow">
+                        <div className="pf-frontpage__arrow">
                             <ArrowSVG />
                         </div>
                     </button>

@@ -1,0 +1,72 @@
+
+.pf-about {
+    margin-top: 25rem;
+
+    &__wrapper {
+        display: flex;
+        max-width: 70vw;
+        min-width: 60rem;
+        width: 100%;
+        margin: 0 auto;
+        height: 100%;
+        position: relative;
+
+        .pf-shapes__line {
+            margin-top: 2.75rem;
+        }
+    }
+
+    &__arrow {
+        height: 1.2rem;
+        width: 1.2rem;
+        transform: rotate(180deg);
+        position: absolute;
+        top: 1.8rem;
+        left: -4rem;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        @include text;
+        color: $color-dark-blue-1;
+        margin-top: 1.8rem;
+        overflow: visible;
+        width: 10rem;
+    }
+
+    &__title {
+        @include heading-type-medium;
+        @include no-typography-spacing;
+        color: $color-dark-blue-1;
+    }
+
+    &__text {
+        @include text;
+        padding-top: 6rem;
+        color: $color-dark-blue-1;
+    }
+
+    &__dot-1 {
+        top: -11rem;
+        left: 58%;
+    }
+
+    &__icon {
+        height: 1.4rem;
+        width: 1.4rem;
+        padding-right: 1rem;
+    }
+
+    &__link-item {
+        margin-bottom: 4rem;
+        display: flex;
+        height: 2rem;
+        
+        a {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+        }
+    }
+}

@@ -6,6 +6,7 @@
     display: flex;
     align-items: center;
     position: fixed;
+    top: 0;
 
     &__wrapper {
         display: flex;
@@ -25,7 +26,6 @@
     }
 
     &__nav-item {
-        list-style-type: none;
         color: $color-dark-blue-1; 
         @include navigation-text;
         margin-left: 8rem;

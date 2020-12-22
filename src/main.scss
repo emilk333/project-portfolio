@@ -11,17 +11,26 @@
 
 // COMPONENTS 
 @import "./components/navigation/Navigation";
+@import "./components/tools-and-skills/ToolsAndSkills";
 
 // PAGES
 @import "./pages/frontpage/Frontpage";
+@import "./pages/about/About";
 
 
 
-
+html {
+    box-sizing: border-box;
+}
 
 
 // LINK STYLING 
 a {
     text-decoration: none;
     color: currentColor;
+}
+
+// LIST STYLING 
+li {
+    list-style-type: none;
 }
