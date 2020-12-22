@@ -1,0 +1,18 @@
+
+.pf-shapes {
+    &__dot {
+        background-color: transparent;
+        border: 0.1rem solid $color-grey;
+        border-radius: 50%;
+        height: 1rem;
+        width: 1rem;
+        position: absolute;
+    }
+
+    &__line {
+        background-color: $color-grey;
+        height: 1px;
+        width: 100%;
+        margin: 0 3rem;
+    }
+}

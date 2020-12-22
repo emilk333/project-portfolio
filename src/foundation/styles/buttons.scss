@@ -1,0 +1,27 @@
+
+.pf-button {
+    background-color: $color-white;
+    @include text;
+    font-size: 1.4rem;
+    color: $color-dark-blue-1;
+    cursor: pointer;
+
+    &--svg {
+        opacity: 1;
+        background-color: transparent;
+        border: none;
+        display: flex;
+
+        svg {
+            transition: all 0.15s ease-in-out;
+            padding-left: 2rem;
+        }
+
+        &:hover {
+            opacity: 0.7;
+            svg {
+                padding-left: 2.5rem;
+            } 
+        }
+    }
+}

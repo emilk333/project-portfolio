@@ -1,21 +1,37 @@
 
-@mixin heading-type-small {}
+@mixin heading-type-small {
+    font-family: 'Mark-Pro-Heavy', Helvetica, sans-serif;
+    font-size: 2.4rem;
+    font-weight: 800;
+}
+
+@mixin heading-type-small-italic {
+    font-family: 'Mark-Pro-Heavy-Italic', Helvetica, sans-serif;
+    font-size: 2.4rem;
+    font-weight: 800;
+}
 
 @mixin heading-type-medium {}
 
 @mixin heading-type-large {}
 
-@mixin text {}
+@mixin text {
+    font-family: 'Helvetica-Neue', Helvetica, sans-serif;
+    font-size: 1.2rem;
+}
 
-@mixin label-text {}
+@mixin label-text {
+    font-family: 'Helvetica-Neue-Cond-Bold', Helvetica, sans-serif;
+    font-size: 1.4rem;
+}
 
 @mixin navigation-text {
     font-family: 'Helvetica-Neue-Cond-Bold', Helvetica, sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     text-transform: uppercase;
 }
 
-@mixin no-typoegraphy-spacing {
+@mixin no-typography-spacing {
     padding: 0;
     margin: 0;
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import EmilDesignLogo from '../../foundation/javascript/svg/emil-design-logo'
+import EmilDesignLogo from '../../foundation/javascript/svg/emil-design-logo-svg'
 
 const Navigation = () => {
     return (

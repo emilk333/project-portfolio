@@ -1,0 +1,68 @@
+
+.pf-frontpage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+   
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__layer {
+        display: flex;
+        align-items: center;
+        max-width: 52vw;
+        min-width: 600px;
+        width: 100%;
+        margin: 0 auto;
+        height: 14rem;
+        position: relative;
+    }
+
+    &__label {
+        @include label-text;
+        @include no-typography-spacing;
+        color: $color-dark-blue-1;
+        margin-left: auto;
+    }
+
+    &__logo-container {
+        height: 5.5rem;
+        width: 30rem;
+    }
+
+    &__title-container {
+        display: flex;
+    }
+
+    &__title {
+        @include heading-type-small;
+        @include no-typography-spacing;
+        white-space: nowrap;
+        padding-right: 0.6rem;
+        color: $color-dark-blue-1;
+
+        &--expression {
+            @include heading-type-small-italic;
+            @include no-typography-spacing;
+            text-transform: lowercase;
+            color: $color-variance-type-1;
+        }
+    }
+
+    &__arrow {
+        height: 1rem;
+        width: 1rem;
+    }
+
+    &__dot-1 {
+        left: 33%;
+    }
+
+    &__dot-2 {
+        left: 72%;
+    }
+}

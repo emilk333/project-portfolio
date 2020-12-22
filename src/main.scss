@@ -7,9 +7,13 @@
 @import "./foundation/styles/containers-and-spacing";
 @import "./foundation/styles/general-animations";
 @import "./foundation/styles/shapes";
+@import "./foundation/styles/buttons";
 
 // COMPONENTS 
 @import "./components/navigation/Navigation";
+
+// PAGES
+@import "./pages/frontpage/Frontpage";
 
 
 
