@@ -1,11 +1,12 @@
 
 .pf-tools-and-skills {
     width: calc(100% / 3);
-    margin-top: 15rem;
 
     &__wrapper {
         width: 100%;
         display: flex;
+        padding-top: 7rem;
+        margin-bottom: 15rem;
     }
 
     &__title {

@@ -1,6 +1,6 @@
 import React from 'react'
 import ToolsAndSkillSVGGenerator from './ToolsAndSkillSVGGenerator.config'
-import IToolsAndSkill from './ToolsAndSkillInterface'
+import { IToolsAndSkill } from './ToolsAndSkillInterface'
 
 const ToolsAndSkills = ( prop:IToolsAndSkill ) => {
     return (

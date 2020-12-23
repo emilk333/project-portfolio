@@ -27,7 +27,7 @@
 
     &__nav-item {
         color: $color-dark-blue-1; 
-        @include navigation-text;
+        @include label-text-uppercase;
         margin-left: 8rem;
         position: relative;
         opacity: 1;

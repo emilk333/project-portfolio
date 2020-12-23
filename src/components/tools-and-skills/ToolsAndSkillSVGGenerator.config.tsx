@@ -19,7 +19,7 @@ interface IsvgDictionary {
     javascript : string
 }
 
-const ToolsAndSkillSVGGenerator = ( svg: any ) : JSX.Element => {
+const ToolsAndSkillSVGGenerator = ( { svg }: any ) : JSX.Element => {
 
     let returnImage : JSX.Element
     const svgDictionary : IsvgDictionary = {
@@ -33,7 +33,7 @@ const ToolsAndSkillSVGGenerator = ( svg: any ) : JSX.Element => {
         javascript : javascript
     }
 
-    svg ? returnImage = <img className="pf-tools-and-skills__icon-img" src={`${svgDictionary[svg.svg as keyof IsvgDictionary]}`}/> : <div></div>
+    svg ? returnImage = <img className="pf-tools-and-skills__icon-img" src={`${svgDictionary[svg as keyof IsvgDictionary]}`} alt={`${svgDictionary[svg as keyof IsvgDictionary]}`}/> : <div></div>
     return returnImage
 }
 

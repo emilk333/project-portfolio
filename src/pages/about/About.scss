@@ -1,13 +1,13 @@
 
 .pf-about {
-    margin-top: 25rem;
+    margin: 0 auto;
+    max-width: 70vw;
+    min-width: 60rem;
+    padding-top: 25rem;
 
     &__wrapper {
         display: flex;
-        max-width: 70vw;
-        min-width: 60rem;
         width: 100%;
-        margin: 0 auto;
         height: 100%;
         position: relative;
 
@@ -68,5 +68,9 @@
             align-items: center;
             white-space: nowrap;
         }
+    }
+
+    .pf-shapes__line.pf-shapes__line--small-space {
+        margin-top: 13rem;
     }
 }

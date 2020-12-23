@@ -1,38 +1,43 @@
-
 @mixin heading-type-small {
-    font-family: 'Mark-Pro-Heavy', Helvetica, sans-serif;
+    font-family: "Mark-Pro-Heavy", Helvetica, sans-serif;
     font-size: 2.4rem;
     font-weight: 800;
 }
 
 @mixin heading-type-small-italic {
-    font-family: 'Mark-Pro-Heavy-Italic', Helvetica, sans-serif;
+    font-family: "Mark-Pro-Heavy-Italic", Helvetica, sans-serif;
     font-size: 2.4rem;
     font-weight: 800;
 }
 
 @mixin heading-type-medium {
-    font-family: 'Mark-Pro-Heavy', Helvetica, sans-serif;
+    font-family: "Mark-Pro-Heavy", Helvetica, sans-serif;
     font-size: 4.8rem;
     font-weight: 800;
 }
 
-@mixin heading-type-large {}
+@mixin heading-type-large {
+}
 
 @mixin text {
-    font-family: 'Helvetica-Neue', Helvetica, sans-serif;
+    font-family: "Helvetica-Neue", Helvetica, sans-serif;
     font-size: 1.2rem;
     line-height: 1.45;
     letter-spacing: 0.1rem;
 }
 
+@mixin text-bold {
+    font-family: "Helvetica-Neue-bold", Helvetica, sans-serif;
+    font-size: 1.6rem;
+}
+
 @mixin label-text {
-    font-family: 'Helvetica-Neue-Cond-Bold', Helvetica, sans-serif;
+    font-family: "Helvetica-Neue-Cond-Bold", Helvetica, sans-serif;
     font-size: 1.4rem;
 }
 
-@mixin navigation-text {
-    font-family: 'Helvetica-Neue-Cond-Bold', Helvetica, sans-serif;
+@mixin label-text-uppercase {
+    font-family: "Helvetica-Neue-Cond-Bold", Helvetica, sans-serif;
     font-size: 1.4rem;
     text-transform: uppercase;
 }

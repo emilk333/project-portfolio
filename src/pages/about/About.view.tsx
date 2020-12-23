@@ -4,9 +4,24 @@ import LinkedinSVG from '../../foundation/javascript/svg/linkedin-svg'
 import LocationSVG from '../../foundation/javascript/svg/location-svg'
 import MailSVG from '../../foundation/javascript/svg/mail-svg'
 import ToolsAndSkills from '../../components/tools-and-skills/ToolsAndSkills.view'
-import IToolsAndSkill from '../../components/tools-and-skills/ToolsAndSkillInterface'
+import { IToolsAndSkill } from '../../components/tools-and-skills/ToolsAndSkillInterface'
+
 
 const About = () => {
+
+    const linkConfig = [
+        {
+            value : "Copenhagen"
+        },
+        {
+            value : "emilkristoffersen93@gmail.com"
+        },
+        {
+            value : "Linkedin profile",
+            url : "https://www.linkedin.com/in/emil-kristoffersen-95a890b8/"
+        }
+    ]
+
     const toolsAndSkillsConfig = [
         {
             title: "Ui tools",
@@ -61,6 +76,35 @@ const About = () => {
         }
     ]
 
+    const renderlinkSection = () => {
+        return (
+            <ul className="pf-about__links">
+                    <li className="pf-about__link-item">
+                        <div className="pf-about__icon">
+                            <LocationSVG />
+                        </div>
+                        {linkConfig[0].value}
+                    </li>
+                    <li className="pf-about__link-item">
+                        <a href={`mailto:${linkConfig[1].value}`} target="_blank">
+                            <div className="pf-about__icon">
+                                <MailSVG />
+                            </div>
+                            {linkConfig[1].value}
+                        </a>
+                    </li>
+                    <li className="pf-about__link-item">
+                        <a href={linkConfig[2].url} target="_blank">
+                            <div className="pf-about__icon">
+                                <LinkedinSVG />
+                            </div>
+                            {linkConfig[2].value}
+                        </a>
+                    </li>
+                </ul>
+        )
+    }
+
     return (
         <div className="pf-about">
             <section className="pf-about__wrapper">
@@ -68,30 +112,7 @@ const About = () => {
                     <ArrowSVG />
                 </div>
                 <div className="pf-shapes__dot pf-about__dot-1"></div>
-                <ul className="pf-about__links">
-                    <li className="pf-about__link-item">
-                        <div className="pf-about__icon">
-                            <LocationSVG />
-                        </div>
-                        Copenhagen
-                    </li>
-                    <li className="pf-about__link-item">
-                        <a href="">
-                            <div className="pf-about__icon">
-                                <MailSVG />
-                            </div>
-                            emilkristoffersen93@gmail.com
-                        </a>
-                    </li>
-                    <li className="pf-about__link-item">
-                        <a href="">
-                            <div className="pf-about__icon">
-                                <LinkedinSVG />
-                            </div>
-                            Linkedin profile
-                        </a>
-                    </li>
-                </ul>
+                    {renderlinkSection()}
                 <div className="pf-shapes__line pf-shapes__line--large-space"></div>
                 <section>
                     <h1 className="pf-about__title">More about me</h1>

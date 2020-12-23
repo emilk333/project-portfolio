@@ -23,6 +23,13 @@ html { font-size: 10px; }
 }
 
 @font-face {
+    font-family: "Helvetica-Neue-Bold";
+    src: url("./assets/fonts/HelveticaNeueBold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: "Helvetica-Neue-Light";
     src: url("./assets/fonts/HelveticaNeue-Light.ttf") format("truetype");
     font-weight: normal;

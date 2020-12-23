@@ -1,0 +1,79 @@
+
+.pf-projects {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pf-project-item {
+    display: flex;
+    align-items: flex-end;
+    height: 50rem;
+    padding: 12rem 0;
+
+    &__info-wrapper {
+        padding-left: 12.5rem;
+        width: 100%;
+        position: relative;
+        padding-bottom: 6rem;
+
+        &--right {
+            padding-left: 0;
+            padding-right: 12.5rem;
+        }
+    }
+
+    &__thumbnail {
+        background-color: red!important;
+        height: 100%;
+        max-height: 50rem;
+        min-height: 30rem;
+        width: 100%;
+        max-width: 20vw;
+        min-width: 20rem;
+    }
+
+    &__title-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        &--right {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__title {
+        @include heading-type-medium;
+        @include no-typography-spacing;
+        color: $color-dark-blue-1;
+        font-size: 2.8rem;
+    }
+
+    &__id {
+        @include no-typography-spacing;
+        @include label-text;
+        color: $color-dark-blue-1;
+        font-size: 2.8rem;
+    }
+
+    &__dot-1 {
+        left: 28rem;
+        top: -12rem;
+
+        &--right {
+            left: 86rem;
+        }
+    }
+
+    &__dot-2 {
+        left: 85rem;
+
+        &--right {
+            left: 25rem;
+            top: 1rem;
+        }
+    }
+
+
+}

@@ -9,4 +9,9 @@ interface IToolsAndSkill {
     ]
 }
 
-export default IToolsAndSkill
+interface IlinkConfig {
+    value : string,
+    url?: string
+}
+
+export { IToolsAndSkill, IlinkConfig }
