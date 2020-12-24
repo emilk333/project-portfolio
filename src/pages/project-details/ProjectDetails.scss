@@ -1,0 +1,57 @@
+
+.pf-project-details {
+    padding-top: 30rem;
+    width: 100%;
+    min-width: 100rem;
+    max-width: 122rem;
+    margin: 0 auto;
+
+    &__container {
+        display: flex;
+    }
+
+    &__title-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__intro-wrapper {
+        padding-left: 14rem;
+        width: 100%;
+        max-width: 55rem;
+    }
+
+    &__sub-header {
+        @include text-bold; 
+
+        color: $color-dark-blue-1;
+    }
+
+    &__text {
+        @include text;
+        padding-bottom: 2rem;
+    }
+
+    &__dot-1 {
+        top: 19rem;
+        left: 37rem;
+    }
+
+    &__dot-2 {
+        left: 100rem;
+    }
+
+    &__dot-3 {
+        left: 65rem;
+        top: 48rem;
+    }
+
+    &__bar-container {
+        position: relative;
+        margin-left: 24rem;
+    }
+
+    &__text-section {
+        margin-top: 8rem;
+    }
+}

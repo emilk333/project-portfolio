@@ -16,10 +16,12 @@
         width: 100%;
         position: relative;
         padding-bottom: 6rem;
+        max-width: 70rem;
 
         &--right {
             padding-left: 0;
             padding-right: 12.5rem;
+            margin-left: auto;
         }
     }
 
@@ -55,6 +57,10 @@
         @include label-text;
         color: $color-dark-blue-1;
         font-size: 2.8rem;
+
+        &--large {
+            font-size: 4.8rem;
+        }
     }
 
     &__dot-1 {
@@ -62,7 +68,7 @@
         top: -12rem;
 
         &--right {
-            left: 86rem;
+            left: 53rem;
         }
     }
 
@@ -70,7 +76,7 @@
         left: 85rem;
 
         &--right {
-            left: 25rem;
+            left: -5rem;
             top: 1rem;
         }
     }
