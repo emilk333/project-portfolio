@@ -11,6 +11,11 @@ interface IPortfolioItems {
     tools: []
 }
 
+interface IToolsAndSkillsSVG {
+    svg : string,
+    name : string
+}
+
 
 interface IPortfolioProject {
     direction: number,
@@ -21,12 +26,7 @@ interface IPortfolioProject {
     year : string,
     association : string,
     synopsis: string,
-    tools: [
-        {
-            svg : string,
-            name : string
-        }
-    ]
+    tools: Array<IToolsAndSkillsSVG>
 }
 
 export { IPortfolioItems }

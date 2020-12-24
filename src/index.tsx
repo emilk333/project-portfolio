@@ -1,6 +1,14 @@
 import './main.scss'
 import React from 'react'
 import ReactDOM from 'react-dom'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams
+} from "react-router-dom";
 
 import Navigation from './components/navigation/Navigation.view'
 import Frontpage from './pages/frontpage/Frontpage.view'
@@ -13,14 +21,52 @@ import { IPortfolioProject } from './pages/projects/ProjectInterfaces'
 
 const App = () => {
 
-    const portfolioProject : IPortfolioProject = {
+  const portfolioProject: IPortfolioProject = {
+    direction: 0,
+    title: "Solarbase.",
+    id: "002",
+    thumbnail: "./assets/images/...",
+    type: "UI Design",
+    year: "2020",
+    association: "Hobby project",
+    synopsis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.  do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet. do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.",
+    tools: [
+      {
+        svg: "adobePS",
+        name: "Adobe experience design"
+      },
+      {
+        svg: "adobeXD",
+        name: "Adobe experience design"
+      },
+    ]
+  }
+
+  const portfolioItems = [
+    {
       direction: 0,
-      title : "Solarbase.",
-      id : "002",
-      thumbnail : "./assets/images/...",
-      type : "UI Design",
-      year : "2020",
-      association : "Hobby project",
+      title: "Solarbase.",
+      id: "002",
+      thumbnail: "./assets/images/...",
+      type: "UI Design",
+      year: "2020",
+      association: "Hobby project",
+      synopsis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.  do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet. do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.",
+      tools: [
+        {
+          svg: "adobeXD",
+          name: "Adobe experience design"
+        },
+      ]
+    },
+    {
+      direction: 1,
+      title: "Futurenow.",
+      id: "003",
+      thumbnail: "./assets/images/...",
+      type: "UI Design",
+      year: "2020",
+      association: "Hobby project",
       synopsis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.  do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet. do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.",
       tools: [
         {
@@ -29,51 +75,28 @@ const App = () => {
         },
       ]
     }
+  ]
 
-    const portfolioItems = [
-        {
-          direction: 0,
-          title : "Solarbase.",
-          id : "002",
-          thumbnail : "./assets/images/...",
-          type : "UI Design",
-          year : "2020",
-          association : "Hobby project",
-          synopsis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.  do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet. do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.",
-          tools: [
-            {
-              svg: "adobeXD",
-              name: "Adobe experience design"
-            },
-          ]
-        },
-        {
-          direction: 1,
-          title : "Futurenow.",
-          id : "003",
-          thumbnail : "./assets/images/...",
-          type : "UI Design",
-          year : "2020",
-          association : "Hobby project",
-          synopsis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.  do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet. do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.",
-          tools: [
-            {
-              svg: "adobeXD",
-              name: "Adobe experience design"
-            },
-          ]
-        }
-      ]
+  return (
+    <Router>
+      <div style={{ height: "100%" }}>
+        <Navigation />
 
-    return (
-        <div style={{ height: "100%" }}>
-            <Navigation />
-            {/* <Frontpage /> */}
-            {/* <About /> */}
-            {/* <Projects portfolioItems={portfolioItems}/> */}
-            < ProjectDetails portfolioProject={portfolioProject}/>
-        </div>
-    )
+        <Switch>
+          <Route path="/">
+            <Frontpage />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/projects">
+            <Projects portfolioItems={portfolioItems}/>
+          </Route>
+        </Switch> 
+        {/* < ProjectDetails portfolioProject={portfolioProject}/> */}
+      </div>
+    </Router>
+  )
 }
 
 ReactDOM.render(<App />, document.getElementById('app'))

@@ -21,7 +21,11 @@ const ProjectDetails = ( {portfolioProject}:any ) => {
                     <div className="pf-project-details__text-section">
                         <h3 className="pf-project-details__sub-header">Tools</h3>
                         {portfolioProject.tools.map((item:any, index:number) => {
-                            return <ToolsAndSkillSVGGenerator svg={item.svg} key={index}/>
+                            return (
+                                <div className="pf-project-details__icon-container">
+                                    <ToolsAndSkillSVGGenerator svg={item.svg} key={index}/>
+                                </div>
+                            )
                         })}
                     </div>
                     <div className="pf-project-details__text-section">

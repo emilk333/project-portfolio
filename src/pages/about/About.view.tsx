@@ -28,7 +28,7 @@ const About = () => {
             content : [
                 {
                     svg: "adobeXD",
-                    name: "Adobe experience design"
+                    name: "Adobe Experience Design"
                 },
                 {
                     svg: "adobePS",
@@ -45,7 +45,7 @@ const About = () => {
             content : [
                 {
                     svg: "react",
-                    name: "React bro"
+                    name: "React"
                 },
                 {
                     svg: "vue",
