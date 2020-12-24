@@ -30,18 +30,26 @@
         @include label-text-uppercase;
         margin-left: 8rem;
         position: relative;
-        opacity: 1;
         transition: opacity 0.15s ease-in-out;
 
-        &--selected {
+        &--underline {
             &::before {
+                opacity: 0;
                 content: "";
                 position: absolute;
                 height: 0.1rem;
                 bottom: -0.4rem;
-                width: 1.1rem;
+                width: 0rem;
                 left: 0.1rem;
                 background-color: currentColor;
+                transition: all 0.15s ease-in-out;
+            }
+        }
+
+        &--selected {
+            &::before {
+                opacity: 1;
+                width: 1.1rem;
             }
         }
 

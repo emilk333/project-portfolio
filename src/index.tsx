@@ -79,7 +79,7 @@ const App = () => {
 
   return (
     <Router>
-      <div style={{ height: "100%" }}>
+      <div style={{ height: "100vh" }}>
         <Navigation />
 
         <Switch>
