@@ -2,11 +2,7 @@ import React from 'react'
 import EmilDesignLogo from '../../foundation/javascript/svg/emil-design-logo-svg'
 import {
     BrowserRouter as Router,
-    Switch,
-    Route,
     NavLink,
-    useRouteMatch,
-    useParams,
   } from "react-router-dom";
 
 const Navigation = () => {

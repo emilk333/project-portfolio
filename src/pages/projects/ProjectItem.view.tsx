@@ -1,16 +1,25 @@
 import React from 'react'
-import { IPortfolioItems } from './ProjectInterfaces'
+import { IPortfolioProject } from './ProjectInterfaces'
 import ProjectDescriptionBar from '../../components/projects/ProjectDescriptionBar.view'
+import ProjectDetails from '../project-details/ProjectDetails.view'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    useRouteMatch,
+    useParams,
+  } from "react-router-dom";
 
-const ProjectItem = ( { item } : any ) => { 
+const ProjectItem = ( {item} : any) => { 
 
     const renderLeftAlignedProject = () => {
         return (
             <article className="pf-project-item">
-                <a href="" style={{height : "100%"}}>
+                
                     <section className="pf-project-item__thumbnail" style={{backgroundImage : `url(${item.thumbnail})`}}></section>
-                </a>
-                <a href="" style={{width : "100%"}}>
+                
+                
                     <section className="pf-project-item__info-wrapper">
                         <div className="pf-shapes__dot pf-project-item__dot-1"></div>
                         <div className="pf-project-item__title-container">
@@ -21,7 +30,7 @@ const ProjectItem = ( { item } : any ) => {
                         </div>
                         < ProjectDescriptionBar type={item.type} year={item.year} association={item.association} flipped={false} direction={item.direction} />
                     </section>
-                </a>
+                
             </article>
         )
     }
@@ -29,7 +38,7 @@ const ProjectItem = ( { item } : any ) => {
     const renderRightAlignedProject = () => {
         return (
             <article className="pf-project-item">
-                <a href="" style={{width : "100%"}}>
+                
                     <section className="pf-project-item__info-wrapper pf-project-item__info-wrapper--right">
                         <div className="pf-shapes__dot pf-project-item__dot-1 pf-project-item__dot-1--right"></div>
                         <div className="pf-project-item__title-container pf-project-item__title-container--right">
@@ -40,10 +49,9 @@ const ProjectItem = ( { item } : any ) => {
                         </div>
                         < ProjectDescriptionBar type={item.type} year={item.year} association={item.association} flipped={false} direction={item.direction} />
                     </section>
-                </a>
-                <a href="" style={{height : "100%"}}>
+                
                     <section className="pf-project-item__thumbnail" style={{backgroundImage : `url(${item.thumbnail})`}}></section>
-                </a>
+                
             </article>
         )
     }

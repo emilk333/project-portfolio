@@ -10,7 +10,8 @@ module.exports = {
         contentBase: path.join(__dirname, 'public'),
         compress: true,
         port: 1337,
-        hot: true
+        hot: true,
+        historyApiFallback: true
     },
     entry: './src/index.tsx',
     output: {

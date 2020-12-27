@@ -5,42 +5,20 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  useRouteMatch,
-  useParams
+  useRouteMatch
 } from "react-router-dom";
 
 import Navigation from './components/navigation/Navigation.view'
 import Frontpage from './pages/frontpage/Frontpage.view'
 import Projects from './pages/projects/Projects'
 import About from './pages/about/About.view'
-import ProjectDetails from './pages/project-details/ProjectDetails.view'
 
 import { IPortfolioProject } from './pages/projects/ProjectInterfaces'
 
 
 const App = () => {
 
-  const portfolioProject: IPortfolioProject = {
-    direction: 0,
-    title: "Solarbase.",
-    id: "002",
-    thumbnail: "./assets/images/...",
-    type: "UI Design",
-    year: "2020",
-    association: "Hobby project",
-    synopsis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.  do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet. do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.",
-    tools: [
-      {
-        svg: "adobePS",
-        name: "Adobe experience design"
-      },
-      {
-        svg: "adobeXD",
-        name: "Adobe experience design"
-      },
-    ]
-  }
+
 
   const portfolioItems = [
     {
@@ -81,19 +59,21 @@ const App = () => {
     <Router>
       <div style={{ height: "100vh" }}>
         <Navigation />
-
         <Switch>
-          <Route path="/">
+
+          <Route path="/" exact>
             <Frontpage />
           </Route>
+
           <Route path="/about">
             <About />
           </Route>
+
           <Route path="/projects">
             <Projects portfolioItems={portfolioItems}/>
           </Route>
+
         </Switch> 
-        {/* < ProjectDetails portfolioProject={portfolioProject}/> */}
       </div>
     </Router>
   )
