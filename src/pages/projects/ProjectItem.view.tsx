@@ -1,12 +1,13 @@
 import React from 'react'
 import ProjectDescriptionBar from '../../components/projects/ProjectDescriptionBar.view'
+import ProjectThumbnailMap from '../../foundation/javascript/projectThumbnailMap'
 
 const ProjectItem = ( {item} : any) => { 
 
     const renderLeftAlignedProject = () => {
         return (
             <article className="pf-project-item">
-                <section className="pf-project-item__thumbnail" style={{backgroundImage : `url(${item.thumbnail})`}}></section>
+                    <ProjectThumbnailMap img={item.thumbnail}/> 
                 <section className="pf-project-item__info-wrapper">
                     <div className="pf-shapes__dot pf-project-item__dot-1"></div>
                     <div className="pf-project-item__title-container">

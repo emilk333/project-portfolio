@@ -17,7 +17,14 @@ const Frontpage = () => {
                     <div className="pf-shapes__line"></div>
                     <div className="pf-frontpage__title-container">
                         <h1 className="pf-frontpage__title">Frontend and interface</h1>
-                        <h1 className="pf-frontpage__title pf-frontpage__title--expression">Design</h1>
+                        <div className="pf-frontpage__carousel-container">
+                            <div className="pf-frontpage__carousel">
+                                <h1 className="pf-frontpage__title pf-frontpage__title--expression pf-frontpage__title--color-1"> Designer</h1>
+                                <h1 className="pf-frontpage__title pf-frontpage__title--expression pf-frontpage__title--color-2">Developer</h1>
+                                <h1 className="pf-frontpage__title pf-frontpage__title--expression pf-frontpage__title--color-3"> Explorer</h1>
+                                <h1 className="pf-frontpage__title pf-frontpage__title--expression pf-frontpage__title--color-4">  Creator</h1>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <section className="pf-frontpage__layer">

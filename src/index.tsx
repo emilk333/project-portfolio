@@ -21,7 +21,7 @@ const App = () => {
       direction: 0,
       title: "Solarbase.",
       id: "001",
-      thumbnail: "./assets/images/...",
+      thumbnail: "furniture",
       type: "UI Design",
       year: "2020",
       association: "Hobby project",

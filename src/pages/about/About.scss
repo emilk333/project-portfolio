@@ -20,9 +20,6 @@
         height: 1.2rem;
         width: 1.2rem;
         transform: rotate(180deg);
-        position: absolute;
-        top: 1.8rem;
-        left: -8rem;
     }
 
     &__links {
@@ -56,21 +53,60 @@
         height: 1.4rem;
         width: 1.4rem;
         padding-right: 1rem;
+        
+        svg {
+            stroke: currentColor;
+        }
     }
 
     &__link-item {
         margin-bottom: 4rem;
         display: flex;
         height: 2rem;
+        transition: color 0.25s ease-in-out;
         
-        a {
+        a, span {
             display: flex;
             align-items: center;
             white-space: nowrap;
+            transition: color 0.25s ease-in-out;
         }
     }
 
     .pf-shapes__line.pf-shapes__line--small-space {
         margin-top: 13rem;
+    }
+
+    &__return-button {
+        position: absolute;
+        top: 2.2rem;
+        left: -8rem;
+    }
+    
+    @keyframes stroke {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    &__link-color-1 {
+        transition: color 0.15s ease-in-out;
+        &:hover {
+            color: $color-variance-type-1;
+        }
+    }
+
+    &__link-color-2 {
+        transition: color 0.15s ease-in-out;
+        &:hover {
+            color: $color-variance-type-2;
+        }
+    }
+
+    &__link-color-3 {
+        transition: color 0.15s ease-in-out;
+        &:hover {
+            color: $color-variance-type-3;
+        }
     }
 }

@@ -84,13 +84,15 @@ const About = () => {
         return (
             <ul className="pf-about__links">
                     <li className="pf-about__link-item">
-                        <div className="pf-about__icon">
-                            <LocationSVG />
-                        </div>
-                        {linkConfig[0].value}
+                        <span className="pf-about__link-color-1">
+                            <div className="pf-about__icon">
+                                <LocationSVG />
+                            </div>
+                            {linkConfig[0].value}
+                        </span>
                     </li>
                     <li className="pf-about__link-item">
-                        <a href={`mailto:${linkConfig[1].value}`} target="_blank">
+                        <a className="pf-about__link-color-2" href={`mailto:${linkConfig[1].value}`} target="_blank">
                             <div className="pf-about__icon">
                                 <MailSVG />
                             </div>
@@ -98,7 +100,7 @@ const About = () => {
                         </a>
                     </li>
                     <li className="pf-about__link-item">
-                        <a href={linkConfig[2].url} target="_blank">
+                        <a className="pf-about__link-color-3" href={linkConfig[2].url} target="_blank">
                             <div className="pf-about__icon">
                                 <LinkedinSVG />
                             </div>
@@ -116,7 +118,7 @@ const About = () => {
     return (
         <div className="pf-about">
             <section className="pf-about__wrapper">
-                <button onClick={goBackInHistory} className="pf-button pf-button--no-styling">
+                <button onClick={goBackInHistory} className="pf-button pf-button--no-styling pf-about__return-button">
                     <div className="pf-about__arrow">
                         <ArrowSVG/>
                     </div>

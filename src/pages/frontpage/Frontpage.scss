@@ -1,14 +1,16 @@
+$fontSize: 1.8rem;
 
 .pf-frontpage {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-   
+
     &__wrapper {
         display: flex;
         flex-direction: column;
         width: 100%;
+        padding-top: 4rem;
     }
 
     &__layer {
@@ -49,7 +51,22 @@
             @include heading-type-small-italic;
             @include no-typography-spacing;
             text-transform: lowercase;
+        }
+
+        &--color-1 {
             color: $color-variance-type-1;
+        }
+
+        &--color-2 {
+            color: $color-variance-type-2;
+        }
+
+        &--color-3 {
+            color: $color-variance-type-3;
+        }
+
+        &--color-4 {
+            color: $color-variance-type-4;
         }
     }
 
@@ -65,4 +82,37 @@
     &__dot-2 {
         left: 72%;
     }
+
+    &__carousel-container {
+        height: $fontSize * 1.5;
+        overflow: hidden;
+    }
+
+    &__carousel {
+        position: relative;
+        animation: rotate 8s ease-in-out infinite;
+    }
 }
+
+@keyframes rotate {
+    0%,
+    20% {
+        transform: translateY(0);
+    }
+    25%,
+    45% {
+        transform: translateY($fontSize * -1.5);
+    }
+    50%,
+    70% {
+        transform: translateY($fontSize * -3);
+    }
+    75%,
+    95% {
+        transform: translateY($fontSize * -4.5);
+    }
+    100% {
+        transform: translateY($fontSize * -6);
+    }
+}
+
