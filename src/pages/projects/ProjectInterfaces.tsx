@@ -16,7 +16,6 @@ interface IToolsAndSkillsSVG {
     name : string
 }
 
-
 interface IPortfolioProject {
     direction: number,
     title : string,

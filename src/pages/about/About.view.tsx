@@ -5,9 +5,13 @@ import LocationSVG from '../../foundation/javascript/svg/location-svg'
 import MailSVG from '../../foundation/javascript/svg/mail-svg'
 import ToolsAndSkills from '../../components/tools-and-skills/ToolsAndSkills.view'
 import { IToolsAndSkill } from '../../components/tools-and-skills/ToolsAndSkillInterface'
-
+import {
+    BrowserRouter as Router,
+    useHistory
+  } from "react-router-dom";
 
 const About = () => {
+    const history = useHistory()
 
     const linkConfig = [
         {
@@ -105,12 +109,18 @@ const About = () => {
         )
     }
 
+    const goBackInHistory = () => {
+        history.goBack()
+    }
+
     return (
         <div className="pf-about">
             <section className="pf-about__wrapper">
-                <div className="pf-about__arrow">
-                    <ArrowSVG />
-                </div>
+                <button onClick={goBackInHistory} className="pf-button pf-button--no-styling">
+                    <div className="pf-about__arrow">
+                        <ArrowSVG/>
+                    </div>
+                </button>
                 <div className="pf-shapes__dot pf-about__dot-1"></div>
                     {renderlinkSection()}
                 <div className="pf-shapes__line pf-shapes__line--large-space"></div>

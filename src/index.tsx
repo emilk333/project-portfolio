@@ -4,27 +4,23 @@ import ReactDOM from 'react-dom'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  useRouteMatch
+  Route
 } from "react-router-dom";
+
 
 import Navigation from './components/navigation/Navigation.view'
 import Frontpage from './pages/frontpage/Frontpage.view'
 import Projects from './pages/projects/Projects'
 import About from './pages/about/About.view'
 
-import { IPortfolioProject } from './pages/projects/ProjectInterfaces'
-
 
 const App = () => {
-
-
 
   const portfolioItems = [
     {
       direction: 0,
       title: "Solarbase.",
-      id: "002",
+      id: "001",
       thumbnail: "./assets/images/...",
       type: "UI Design",
       year: "2020",
@@ -40,7 +36,7 @@ const App = () => {
     {
       direction: 1,
       title: "Futurenow.",
-      id: "003",
+      id: "002",
       thumbnail: "./assets/images/...",
       type: "UI Design",
       year: "2020",
