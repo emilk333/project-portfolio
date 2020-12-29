@@ -31,13 +31,26 @@
             margin: 0 4rem;
             max-width: 16rem;
             width: 100%;
-            transition: all 0.35s ease-in-out;
         }
 
         &--small-space {
             margin: 0;
             max-width: 3rem;
             width: 100%;
+        }
+
+        &--no-left-space {
+            margin: 0 4rem 0 0;
+            max-width: 10rem;
+            width: 100%;
+            transition: all 0.35s ease-in-out;
+        }
+
+        &--no-left-space-large {
+            margin: 0 4rem 0 0;
+            max-width: 20rem;
+            width: 100%;
+            transition: all 0.35s ease-in-out;
         }
     }
 }

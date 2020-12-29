@@ -1,6 +1,7 @@
 import React from 'react'
-import ProjectItem from './ProjectItem.view'
 import ProjectDetails from '../project-details/ProjectDetails.view'
+import ProjectDescriptionBar from '../../components/projects/ProjectDescriptionBar.view'
+import ProjectThumbnailMap from '../../foundation/javascript/projectThumbnailMap'
 
 import {
   BrowserRouter as Router,
@@ -10,24 +11,47 @@ import {
   useRouteMatch,
 } from "react-router-dom";
 
-const Projects = ( {portfolioItems} : any ) => {
+const Projects = ({ portfolioItems }: any) => {
 
   const portfolioItemsData = [...portfolioItems]
   const { url, path } = useRouteMatch()
-  
+
+  const renderProjectItem = (item: any, index: number) => {
+    return (
+      <article className="pf-project-item">
+        <section className="pf-project-item__info-wrapper">
+          <div className="pf-shapes__dot pf-project-item__dot-1"></div>
+          <div className="pf-shapes__dot pf-project-item__dot-3"></div>
+          <div className="pf-project-item__title-container">
+            <div className="pf-shapes__line pf-shapes__line--no-left-space"></div>
+            <div className="pf-project-item__title-wrapper">
+              <h1 className="pf-project-item__title">{item.title}</h1>
+              <h2 className="pf-project-item__id">{item.id}</h2>
+            </div>
+            <div className="pf-shapes__dot pf-project-item__dot-2"></div>
+          </div>
+          < ProjectDescriptionBar type={item.type} year={item.year} association={item.association} flipped={true} direction={item.direction} />
+        </section>
+        <Link className="pf-project-item__thumbnail-container" to={`${url}/00${index + 1}`}>
+          <ProjectThumbnailMap img={item.thumbnail} />
+        </Link>
+      </article>
+    )
+  }
+
   return (
     <div className="pf-projects">
-      <Switch>    
-          <Route exact path={path}>
-          {portfolioItemsData.map((item:any, index:number) => {
-              return (
-                <Link key={index} to={`${url}/00${index+1}`}>
-                  <ProjectItem item={item}/>
-                </Link>
-              )
-            })}
-          </Route>
-          <Route path={`${path}/:projectId`} component={({match}:any) => <ProjectDetails portfolioItemsData={portfolioItemsData} match={match}/>} />
+      <Switch>
+        <Route exact path={path}>
+          {portfolioItemsData.map((item: any, index: number) => {
+            return (
+              <div key={index}>
+                {renderProjectItem(item, index)}
+              </div>
+            )
+          })}
+        </Route>
+        <Route path={`${path}/:projectId`} component={({ match }: any) => <ProjectDetails portfolioItemsData={portfolioItemsData} match={match} />} />
       </Switch>
     </div>
   )

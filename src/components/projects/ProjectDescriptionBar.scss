@@ -16,18 +16,19 @@
 
     &__label {
         @include label-text-uppercase;
+        @include no-typography-spacing;
         color: $color-grey;
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
+        font-size: 1.1rem;
     }
 
     &__value {
         @include text-bold;
         color: $color-dark-blue-1;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+        margin-top: 0.5rem;
     }
 
     &__content-margin {
-        margin-bottom: 8rem;
+        margin-bottom: 3rem;
     }
 }

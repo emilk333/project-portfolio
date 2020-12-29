@@ -3,10 +3,10 @@ import ProjectDescriptionBar from '../../components/projects/ProjectDescriptionB
 import ToolsAndSkillSVGGenerator from '../../components/tools-and-skills/ToolsAndSkillSVGGenerator.config'
 
 
-const ProjectDetails = ( {portfolioItemsData, match}:any ) => {
-    
-    const clickedProject = portfolioItemsData.find((item:any) => item.id === match.params.projectId)
-    
+const ProjectDetails = ({ portfolioItemsData, match }: any) => {
+
+    const clickedProject = portfolioItemsData.find((item: any) => item.id === match.params.projectId)
+
     if (!clickedProject) return (
         <div className="pf-project-details__error">
             <h1 className="pf-project-item__id">Sorry!</h1>
@@ -18,9 +18,11 @@ const ProjectDetails = ( {portfolioItemsData, match}:any ) => {
             <section className="pf-project-details__title-wrapper">
                 <div className="pf-shapes__dot pf-project-details__dot-1"></div>
                 <div className="pf-project-item__title-container">
-                    <h2 className="pf-project-item__id pf-project-item__id--large">{clickedProject.id}</h2>
-                    <div className="pf-shapes__line pf-shapes__line--xl-space"></div>
-                    <h1 className="pf-project-item__title">{clickedProject.title}</h1>
+                    <div className="pf-shapes__line pf-shapes__line--no-left-space-large"></div>
+                    <div className="pf-project-item__title-wrapper">
+                        <h1 className="pf-project-item__title pf-project-item__title--details">{clickedProject.title}</h1>
+                        <h2 className="pf-project-item__id pf-project-item__id--details">{clickedProject.id}</h2>
+                    </div>
                     <div className="pf-shapes__dot pf-project-details__dot-2"></div>
                     <div className="pf-shapes__dot pf-project-details__dot-3"></div>
                 </div>
@@ -29,10 +31,10 @@ const ProjectDetails = ( {portfolioItemsData, match}:any ) => {
                 <div className="pf-project-details__intro-wrapper">
                     <div className="pf-project-details__text-section">
                         <h3 className="pf-project-details__sub-header">Tools</h3>
-                        {clickedProject.tools.map((item:any, index:number) => {
+                        {clickedProject.tools.map((item: any, index: number) => {
                             return (
                                 <div key={index} className="pf-project-details__icon-container">
-                                    <ToolsAndSkillSVGGenerator svg={item.svg} key={index}/>
+                                    <ToolsAndSkillSVGGenerator svg={item.svg} key={index} />
                                 </div>
                             )
                         })}
