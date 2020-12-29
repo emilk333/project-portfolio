@@ -1,6 +1,5 @@
 
 interface IPortfolioItems {
-    direction: number,
     titel : string,
     id : string,
     thumbnail : string,
@@ -17,7 +16,6 @@ interface IToolsAndSkillsSVG {
 }
 
 interface IPortfolioProject {
-    direction: number,
     title : string,
     id : string,
     thumbnail : string,

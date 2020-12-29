@@ -1,5 +1,5 @@
-
 // FOUNDATION
+@import "./foundation/styles/breakpoints.scss";
 @import "./foundation/styles/normalize";
 @import "./foundation/styles/variables";
 @import "./foundation/styles/fonts";
@@ -9,7 +9,7 @@
 @import "./foundation/styles/shapes";
 @import "./foundation/styles/buttons";
 
-// COMPONENTS 
+// COMPONENTS
 @import "./components/navigation/Navigation";
 @import "./components/projects/ProjectDescriptionBar";
 @import "./components/tools-and-skills/ToolsAndSkills";
@@ -20,24 +20,44 @@
 @import "./pages/projects/Projects";
 @import "./pages/project-details/ProjectDetails";
 
-
-
 html {
     box-sizing: border-box;
 }
 
-
-// LINK STYLING 
+// LINK STYLING
 a {
     text-decoration: none;
     color: currentColor;
 }
 
-// LIST STYLING 
+// LIST STYLING
 li {
     list-style-type: none;
 }
 
 ul {
     padding-left: 0;
+}
+
+
+.mobile-spacing {
+    box-sizing: border-box;
+    @media only screen and (max-width: $phone) {
+        padding: 0 2rem;
+    }
+}
+
+
+// PROJECTS PAGE ANIMATIONS 
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20vh);
+    visibility: hidden;
+    transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+    will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
 }

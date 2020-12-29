@@ -116,7 +116,7 @@ const About = () => {
     }
 
     return (
-        <div className="pf-about">
+        <div className="pf-about mobile-spacing">
             <section className="pf-about__wrapper">
                 <button onClick={goBackInHistory} className="pf-button pf-button--no-styling pf-about__return-button">
                     <div className="pf-about__arrow">

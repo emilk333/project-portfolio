@@ -7,6 +7,8 @@ import vue from '../../assets/images/vue.png'
 import webpack from '../../assets/images/webpack.png'
 import zeplin from '../../assets/images/zeplin.png'
 import javascript from '../../assets/images/javascript.png'
+import flask from '../../assets/images/flask.png'
+import angular from '../../assets/images/angular.png'
 
 interface IsvgDictionary {
     adobeXD : string,
@@ -16,7 +18,9 @@ interface IsvgDictionary {
     vue : string,
     webpack : string, 
     zeplin : string,
-    javascript : string
+    javascript : string,
+    flask : string,
+    angular : string
 }
 
 const ToolsAndSkillSVGGenerator = ( { svg }: any ) : JSX.Element => {
@@ -30,7 +34,9 @@ const ToolsAndSkillSVGGenerator = ( { svg }: any ) : JSX.Element => {
         vue : vue,
         webpack : webpack,
         zeplin : zeplin,
-        javascript : javascript
+        javascript : javascript,
+        flask : flask,
+        angular : angular 
     }
 
     svg ? returnImage = <img className="pf-tools-and-skills__icon-img" src={`${svgDictionary[svg as keyof IsvgDictionary]}`} alt={`${svgDictionary[svg as keyof IsvgDictionary]}`}/> : <div></div>

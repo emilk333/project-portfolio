@@ -1,4 +1,3 @@
-
 .pf-navigation {
     height: 60px;
     width: 100%;
@@ -7,14 +6,21 @@
     align-items: center;
     position: fixed;
     top: 0;
+    z-index: 10;
 
     &__wrapper {
         display: flex;
-        max-width: 1240px;
+        max-width: 1680px;
         width: 100%;
         margin: 0 auto;
+        padding: 0 5rem;
+        align-items: center;
+
+        @media only screen and (max-width: $phone) {
+            padding: 0 2rem;
+        }
     }
-    
+
     &__logo-container {
         height: 3rem;
         width: 5.5rem;
@@ -26,11 +32,15 @@
     }
 
     &__nav-item {
-        color: $color-dark-blue-1; 
+        color: $color-dark-blue-1;
         @include label-text-uppercase;
         margin-left: 8rem;
         position: relative;
         transition: opacity 0.15s ease-in-out;
+
+        @media only screen and (max-width: $phone) {
+            margin-left: 3rem
+        }
 
         &--underline {
             &::before {

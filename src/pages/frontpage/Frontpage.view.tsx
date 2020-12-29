@@ -4,7 +4,7 @@ import ArrowSVG from '../../foundation/javascript/svg/arrow-svg'
 
 const Frontpage = () => {
     return (
-        <div className="pf-frontpage">
+        <div className="pf-frontpage mobile-spacing">
             <div className="pf-frontpage__wrapper">
                 <section className="pf-frontpage__layer">
                     <div className="pf-shapes__dot pf-frontpage__dot-1"></div>

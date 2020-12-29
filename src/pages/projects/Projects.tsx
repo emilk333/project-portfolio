@@ -2,6 +2,7 @@ import React from 'react'
 import ProjectDetails from '../project-details/ProjectDetails.view'
 import ProjectDescriptionBar from '../../components/projects/ProjectDescriptionBar.view'
 import ProjectThumbnailMap from '../../foundation/javascript/projectThumbnailMap'
+import FadeInSection from '../../foundation/javascript/FadeInSection'
 
 import {
   BrowserRouter as Router,
@@ -30,7 +31,7 @@ const Projects = ({ portfolioItems }: any) => {
             </div>
             <div className="pf-shapes__dot pf-project-item__dot-2"></div>
           </div>
-          < ProjectDescriptionBar type={item.type} year={item.year} association={item.association} flipped={true} direction={item.direction} />
+          < ProjectDescriptionBar type={item.type} year={item.year} association={item.association} flipped={true}/>
         </section>
         <Link className="pf-project-item__thumbnail-container" to={`${url}/00${index + 1}`}>
           <ProjectThumbnailMap img={item.thumbnail} />
@@ -40,14 +41,14 @@ const Projects = ({ portfolioItems }: any) => {
   }
 
   return (
-    <div className="pf-projects">
+    <div className="pf-projects mobile-spacing">
       <Switch>
         <Route exact path={path}>
           {portfolioItemsData.map((item: any, index: number) => {
             return (
-              <div key={index}>
+              <FadeInSection key={index}>
                 {renderProjectItem(item, index)}
-              </div>
+              </FadeInSection>
             )
           })}
         </Route>

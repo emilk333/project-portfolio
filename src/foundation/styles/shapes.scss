@@ -15,6 +15,10 @@
         width: 100%;
         margin: 0 3rem;
 
+        @media only screen and (max-width: $phone) {
+            max-width: 10rem;
+        }
+
         &--xl-space {
             margin: 0 4rem;
             max-width: 25rem;
@@ -51,6 +55,10 @@
             max-width: 20rem;
             width: 100%;
             transition: all 0.35s ease-in-out;
+            
+            @media only screen and (max-width: $phone) {
+                max-width: 8rem;
+            }
         }
     }
 }

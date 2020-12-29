@@ -6,9 +6,18 @@
     max-width: 122rem;
     margin: 0 auto;
 
+    @media only screen and (max-width: $phone) {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
     &__container {
         display: flex;
         margin-bottom: 10rem;
+
+        @media only screen and (max-width: $phone) {
+            flex-direction: column;
+        }
     }
 
     &__title-wrapper {
@@ -21,11 +30,15 @@
         width: 100%;
         max-width: 55rem;
         margin-top: 10rem;
+
+        @media only screen and (max-width: $phone) {
+            padding-left: 1rem;
+        }
     }
 
     &__sub-header {
         @include text-bold; 
-
+        font-size: 1.4rem;
         color: $color-dark-blue-1;
     }
 
@@ -37,20 +50,36 @@
     &__dot-1 {
         top: 13rem;
         left: 48rem;
+
+        @media only screen and (max-width: $phone) {
+            left: 7rem;
+        }
     }
 
     &__dot-2 {
         left: 100rem;
+
+        @media only screen and (max-width: $phone) {
+            left: 35rem;
+        }
     }
 
     &__dot-3 {
         left: 71rem;
         top: 14rem;
+
+        @media only screen and (max-width: $phone) {
+            left: 20rem;
+        }
     }
 
     &__bar-container {
         position: relative;
         margin-left: 24rem;
+
+        @media only screen and (max-width: $phone) {
+            margin-left: 5rem;
+        }
     }
 
     &__text-section {

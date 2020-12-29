@@ -14,6 +14,11 @@
         padding-top: 12rem;
         position: relative;
         width: 40%;
+
+        @media only screen and (max-width: $phone) {
+            padding-left: 7rem;
+            padding-right: 7rem;
+        }
     }
 
     &__thumbnail-container {
@@ -27,7 +32,7 @@
     }
 
     &__thumbnail {
-        background-color: $color-grey;
+        background-color: $color-light-grey;
         background-position: left;
         background-repeat: no-repeat;
         background-size: cover;
@@ -73,6 +78,10 @@
 
         &--details {
             font-size: 4.8rem;
+
+            @media only screen and (max-width: $phone) {
+                font-size: 2.8rem;
+            }
         }
     }
 
@@ -92,21 +101,40 @@
             font-size: 12rem;
             right: -9.5rem;
             top: -6.7rem;
+
+            @media only screen and (max-width: $phone) {
+                font-size: 6rem;
+                right: -4.5rem;
+                top: -3rem;
+            }
         }
     }
 
     &__dot-1 {
         left: 26rem;
         top: 0;
+
+        @media only screen and (max-width: $phone) {
+            left: 13rem;
+            top: -4rem;
+        }
     }
 
     &__dot-2 {
         left: 17rem;
         bottom: -34rem;
+
+        @media only screen and (max-width: $phone) {
+            left: 12rem;
+        }
     }
 
     &__dot-3 {
         left: 39rem;
         bottom: 24rem;
+
+        @media only screen and (max-width: $phone) {
+            left: 2rem;
+        }
     }
 }
