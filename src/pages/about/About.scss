@@ -85,9 +85,11 @@
     }
 
     &__link-item {
+        will-change: left;
         margin-bottom: 4rem;
         display: flex;
         height: 2rem;
+        position: relative;
         transition: color 0.25s ease-in-out;
         
         a, span {
@@ -108,8 +110,14 @@
 
     &__return-button {
         position: absolute;
-        top: 2.2rem;
-        left: -8rem;
+        top: 1.5rem;
+        left: -10rem;
+        padding: 1rem;
+
+        &:hover{
+            opacity: 0.7;
+            transform: scale(1.15);
+        }
     }
     
     @keyframes stroke {

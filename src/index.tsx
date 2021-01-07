@@ -6,6 +6,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import { AnimatePresence } from 'framer-motion'
 
 
 import Navigation from './components/navigation/Navigation.view'
@@ -133,21 +134,17 @@ const App = () => {
     <Router>
       <div style={{ height: "100vh" }}>
         <Navigation />
-        <Switch>
-
-          <Route path="/" exact>
-            <Frontpage />
-          </Route>
-
-          <Route path="/about">
-            <About />
-          </Route>
-
-          <Route path="/projects">
-            <Projects portfolioItems={portfolioItems}/>
-          </Route>
-
-        </Switch> 
+        <Route render={({location}) => (
+            <AnimatePresence exitBeforeEnter>
+              <Switch location={location} key={location.pathname}>
+                <Route path="/" exact render={() => <Frontpage />}/>
+                <Route path="/about" exact render={() => <About />}/>
+                <Route path="/projects" exact render={() => <Projects portfolioItems={portfolioItems}/>}/>
+              </Switch> 
+            </AnimatePresence>
+          )}
+        >  
+        </Route>
       </div>
     </Router>
   )

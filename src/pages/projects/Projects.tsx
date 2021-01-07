@@ -3,6 +3,7 @@ import ProjectDetails from '../project-details/ProjectDetails.view'
 import ProjectDescriptionBar from '../../components/projects/ProjectDescriptionBar.view'
 import ProjectThumbnailMap from '../../foundation/javascript/projectThumbnailMap'
 import FadeInSection from '../../foundation/javascript/FadeInSection'
+import { AnimatePresence } from 'framer-motion'
 
 import {
   BrowserRouter as Router,

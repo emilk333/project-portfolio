@@ -1,4 +1,5 @@
 import React from 'react'
+import {motion} from 'framer-motion'
 import ArrowSVG from '../../foundation/javascript/svg/arrow-svg'
 import LinkedinSVG from '../../foundation/javascript/svg/linkedin-svg'
 import LocationSVG from '../../foundation/javascript/svg/location-svg'
@@ -83,30 +84,30 @@ const About = () => {
     const renderlinkSection = () => {
         return (
             <ul className="pf-about__links">
-                    <li className="pf-about__link-item">
+                    <motion.li initial={{left: '-20rem'}} animate={{left: 0}} transition={{delay: 0}} className="pf-about__link-item">
                         <span className="pf-about__link-color-1">
                             <div className="pf-about__icon">
                                 <LocationSVG />
                             </div>
                             {linkConfig[0].value}
                         </span>
-                    </li>
-                    <li className="pf-about__link-item">
+                    </motion.li>
+                    <motion.li initial={{left: '-24rem'}} animate={{left: 0}} transition={{delay: 0.2}} className="pf-about__link-item">
                         <a className="pf-about__link-color-2" href={`mailto:${linkConfig[1].value}`} target="_blank">
                             <div className="pf-about__icon">
                                 <MailSVG />
                             </div>
                             {linkConfig[1].value}
                         </a>
-                    </li>
-                    <li className="pf-about__link-item">
+                    </motion.li>
+                    <motion.li  initial={{left: '-28rem'}} animate={{left: 0}} transition={{delay: 0.4}} className="pf-about__link-item">
                         <a className="pf-about__link-color-3" href={linkConfig[2].url} target="_blank">
                             <div className="pf-about__icon">
                                 <LinkedinSVG />
                             </div>
                             {linkConfig[2].value}
                         </a>
-                    </li>
+                    </motion.li>
                 </ul>
         )
     }
@@ -116,13 +117,13 @@ const About = () => {
     }
 
     return (
-        <div className="pf-about mobile-spacing">
+        <motion.div initial={{opacity : 0}} animate={{opacity : 1}} transition={{duration : 0.8}} exit="exit" className="pf-about mobile-spacing">
             <section className="pf-about__wrapper">
-                <button onClick={goBackInHistory} className="pf-button pf-button--no-styling pf-about__return-button">
+                <motion.button initial={{left: '-30rem'}} animate={{left: '-10rem'}} transition={{delay: 0.5}} onClick={goBackInHistory} className="pf-button pf-button--no-styling pf-about__return-button">
                     <div className="pf-about__arrow">
                         <ArrowSVG/>
                     </div>
-                </button>
+                </motion.button>
                 <div className="pf-shapes__dot pf-about__dot-1"></div>
                     {renderlinkSection()}
                 <div className="pf-shapes__line pf-shapes__line--large-space"></div>
@@ -137,7 +138,7 @@ const About = () => {
                     {toolsAndSkillsConfig.map((item:IToolsAndSkill, index) => <ToolsAndSkills key={index} title={item.title} content={item.content}/> )}
                 </div>
             </section>
-        </div>
+        </motion.div>
     )
 }
 
