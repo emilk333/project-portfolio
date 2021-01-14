@@ -8,22 +8,26 @@ import {
     NavLink,
   } from "react-router-dom";
 
-const transition = { duration: 0.4, ease: [0.43, 0.13, 0.23, 0.96]}
+
+const transition = { duration: 1, ease: [0.43, 0.13, 0.23, 0.96]}
+const dotSize = { duration: 0.25, ease: [0.43, 0.13, 0.23, 0.96], height: '0', width: '0', opacity: 0}
+const titleExit = { left: '30rem', opacity: 0 }
+const logoExit = { left: '-25rem', opacity: 0}
 
 const Frontpage = () => {
     return (
         <div className="pf-frontpage mobile-spacing">
-            <motion.div exit={{ opacity:0 }} transition={transition} className="pf-frontpage__wrapper">
+            <motion.div exit="exit" transition={transition} initial={{opacity : 0}} animate={{opacity : 1}} className="pf-frontpage__wrapper">
+                <motion.section exit={{left: '-10rem', opacity: 0}} className="pf-frontpage__layer">
+                    <motion.div exit={dotSize} transition={transition} className="pf-shapes__dot pf-frontpage__dot-1"></motion.div>
+                    <motion.p initial={{bottom: '6rem'}} animate={{bottom: '0rem'}} transition={{duration : 0.5}} className="pf-frontpage__label">2021 Portfolio</motion.p>
+                </motion.section>
                 <section className="pf-frontpage__layer">
-                    <div className="pf-shapes__dot pf-frontpage__dot-1"></div>
-                    <p className="pf-frontpage__label">2021 Portfolio</p>
-                </section>
-                <section className="pf-frontpage__layer">
-                    <div className="pf-frontpage__logo-container">
+                    <motion.div exit={logoExit} transition={transition} className="pf-frontpage__logo-container">
                         <EmilDesignLogo />
-                    </div>
-                    <div className="pf-shapes__line"></div>
-                    <div className="pf-frontpage__title-container">
+                    </motion.div>
+                    <motion.div exit={{width: '0'}} transition={transition} className="pf-shapes__line"></motion.div>
+                    <motion.div exit={titleExit} transition={transition} className="pf-frontpage__title-container">
                         <h1 className="pf-frontpage__title">Frontend and interface</h1>
                         <div className="pf-frontpage__carousel-container">
                             <div className="pf-frontpage__carousel">
@@ -33,19 +37,21 @@ const Frontpage = () => {
                                 <h1 className="pf-frontpage__title pf-frontpage__title--expression pf-frontpage__title--color-4">  Creator</h1>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </section>
-                <section className="pf-frontpage__layer">
-                    <NavLink to="/projects">
-                        <button className="pf-button pf-button--svg" >
-                            See my work
-                        <div className="pf-frontpage__arrow">
-                                <ArrowSVG />
-                            </div>
-                        </button>
-                    </NavLink>
-                    <div className="pf-shapes__dot pf-frontpage__dot-2"></div>
-                </section>
+                <motion.section exit={{right: '10rem', opacity: 0}} className="pf-frontpage__layer">
+                    <motion.div initial={{top: '6rem'}} animate={{top: '0rem'}} transition={{duration : 0.5}} className="pf-frontpage__my-work-button">
+                        <NavLink to="/projects">
+                            <button className="pf-button pf-button--svg" >
+                                See my work
+                            <div className="pf-frontpage__arrow">
+                                    <ArrowSVG />
+                                </div>
+                            </button>
+                        </NavLink>
+                    </motion.div>
+                    <motion.div exit={dotSize} transition={transition} className="pf-shapes__dot pf-frontpage__dot-2"></motion.div>
+                </motion.section>
             </motion.div>
         </div>
     )

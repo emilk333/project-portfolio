@@ -4,7 +4,7 @@ import ToolsAndSkillSVGGenerator from '../../components/tools-and-skills/ToolsAn
 
 
 const ProjectDetails = ({ portfolioItemsData, match }: any) => {
-
+    
     const clickedProject = portfolioItemsData.find((item: any) => item.id === match.params.projectId)
 
     if (!clickedProject) return (

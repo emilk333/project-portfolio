@@ -1,7 +1,7 @@
 
 .pf-shapes {
     &__dot {
-        background-color: transparent;
+        background-color: $color-white;
         border: 0.1rem solid $color-grey;
         border-radius: 50%;
         height: 1rem;
@@ -45,7 +45,7 @@
 
         &--no-left-space {
             margin: 0 4rem 0 0;
-            max-width: 10rem;
+            max-width: 6rem;
             width: 100%;
             transition: all 0.35s ease-in-out;
         }

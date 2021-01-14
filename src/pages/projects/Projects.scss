@@ -8,10 +8,22 @@
     display: flex;
     max-height: calc(100vh + 2px);
     align-items: center;
+    justify-content: center;
+    padding-bottom: 10rem;
+
+    &__container {
+        width: 100%;
+        max-width: 840px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding-top: 8rem;
+    }
 
     &__info-wrapper {
-        padding-left: 12rem;
-        padding-top: 12rem;
+        padding-left: 8.5rem;
+        padding-top: 11rem;
         position: relative;
         width: 40%;
 
@@ -22,13 +34,13 @@
     }
 
     &__thumbnail-container {
-        height: 100%;
-        max-height: calc(100vh + 2px);
-        min-height: calc(100vh + 2px);
-        width: 100%;
+        height: 35rem;
+        width: 24rem;
         position: relative;
-        top: -1px;
         overflow: hidden;
+        border-radius: 2rem;
+        top: -5rem;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
     }
 
     &__thumbnail {
@@ -55,6 +67,12 @@
                 }
             }
         }
+    }
+
+    .pf-shapes__line--small-space {
+        left: -26rem;
+        position: relative;
+        top: -4.5rem;
     }
 
     &__title-container {
@@ -90,12 +108,12 @@
         @include label-text;
         color: $color-dark-blue-1;
         opacity: 0.06;
-        font-size: 6.5rem;
+        font-size: 7.5rem;
         transition: all 0.25s ease-in-out;
         position: absolute;
         z-index: 1;
-        right: -5rem;
-        top: -3.8rem;
+        right: -6rem;
+        top: -4.8rem;
 
         &--details {
             font-size: 12rem;
@@ -111,8 +129,8 @@
     }
 
     &__dot-1 {
-        left: 26rem;
-        top: 0;
+        left: 20rem;
+        top: -4rem;
 
         @media only screen and (max-width: $phone) {
             left: 13rem;
@@ -121,7 +139,7 @@
     }
 
     &__dot-2 {
-        left: 17rem;
+        left: -6rem;
         bottom: -34rem;
 
         @media only screen and (max-width: $phone) {
@@ -130,11 +148,20 @@
     }
 
     &__dot-3 {
-        left: 39rem;
+        right: -13rem;
         bottom: 24rem;
 
         @media only screen and (max-width: $phone) {
             left: 2rem;
+        }
+    }
+
+    &__dot-4 {
+        left: -45rem;
+        bottom: 26rem;
+
+        @media only screen and (max-width: $phone) {
+            left: 20rem;
         }
     }
 }
