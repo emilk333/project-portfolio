@@ -25,6 +25,7 @@ const App = () => {
       type: "UI Design",
       year: "2019",
       association: "Hobby project",
+      shadow: 'rgb(230 131 61 / 20%) 0px 18px 50px -10px',
       synopsis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.  do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet. do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.",
       tools: [
         {
@@ -35,7 +36,12 @@ const App = () => {
           svg: "adobePS",
           name: "Adobe Photoshop"
         }
-      ]
+      ],
+      images: {
+        image1: "solarBase1",
+        image2: "solarBase2",
+        image3: "solarBase3",
+      }
     },
     {
       title: "Moonshine Furniture",
@@ -43,6 +49,7 @@ const App = () => {
       thumbnail: "furniture",
       type: "UI Design",
       year: "2020",
+      shadow: 'rgba(13, 35, 20, 0.20) 0px 18px 50px -10px',
       association: "Hobby project",
       synopsis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.  do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet. do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.",
       tools: [
@@ -54,7 +61,12 @@ const App = () => {
           svg: "adobePS",
           name: "Adobe Photoshop"
         }
-      ]
+      ],
+      images: {
+        image1: "moonshine1",
+        image2: "moonshine2",
+        image3: "moonshine3",
+      }
     },
     {
       title: "Futurenow.",
@@ -62,6 +74,7 @@ const App = () => {
       thumbnail: "futurenow",
       type: "UI + Service Experience Design",
       year: "2019",
+      shadow: 'rgb(67 176 253 / 15%) 0px 18px 50px -10px',
       association: "Master Thesis Project",
       synopsis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.  do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet. do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.",
       tools: [
@@ -69,7 +82,8 @@ const App = () => {
           svg: "adobeXD",
           name: "Adobe experience design"
         }
-      ]
+      ],
+      images: {}
     },
     {
       title: "Fightiq.",
@@ -77,6 +91,7 @@ const App = () => {
       thumbnail: "fightiq",
       type: "UI Design + SCSS implementation",
       year: "2020",
+      shadow: 'rgba(253, 67, 67, 0.20) 0px 18px 50px -10px',
       association: "Collaborative Hobby Project",
       synopsis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.  do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet. do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.",
       tools: [
@@ -92,7 +107,8 @@ const App = () => {
           svg: "flask",
           name: "Flask Webapp (Python)"
         }
-      ]
+      ],
+      images: {}
     },
     {
       title: "VIP.",
@@ -100,6 +116,7 @@ const App = () => {
       thumbnail: "vip",
       type: "UI + Service Experience Design",
       year: "2018",
+      shadow: 'rgba(67, 98, 253, 0.15) 0px 18px 50px -10px',
       association: "Industry Collaboration",
       synopsis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.  do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet. do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.",
       tools: [
@@ -107,8 +124,9 @@ const App = () => {
           svg: "adobeXD",
           name: "Adobe experience design"
         }
-      ]
-    }, 
+      ],
+      images: {}
+    },
     {
       title: "Todolist.",
       id: "006",
@@ -116,6 +134,7 @@ const App = () => {
       type: "UI Design + Frontend development",
       year: "2018",
       association: "Hobby Project",
+      shadow: 'rgba(146, 67, 253, 0.15) 0px 18px 50px -10px',
       synopsis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.  do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet. do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.",
       tools: [
         {
@@ -126,24 +145,29 @@ const App = () => {
           svg: "angular",
           name: "Angular 4"
         }
-      ]
+      ],
+      images: {}
     }
   ]
 
   return (
     <Router>
       <div style={{ height: "100vh" }}>
+        <div className="tmp__home--bg">
+          <div className="tmp__home--bg--first"></div>
+          <div className="tmp__home--bg--second"></div>
+        </div>
         <Navigation />
-        <Route render={({location}) => (
-            <AnimatePresence exitBeforeEnter>
-              <Switch location={location} key={location.pathname}>
-                <Route path="/" exact render={() => <Frontpage />}/>
-                <Route path="/about" exact render={() => <About />}/>
-                <Route path="/projects" exact render={() => <Projects portfolioItems={portfolioItems}/>}/>
-              </Switch> 
-            </AnimatePresence>
-          )}
-        >  
+        <Route render={({ location }) => (
+          <AnimatePresence exitBeforeEnter>
+            <Switch location={location} key={location.pathname}>
+              <Route path="/" exact render={() => <Frontpage />} />
+              <Route path="/about" render={() => <About />} />
+              <Route path="/projects" render={() => <Projects portfolioItems={portfolioItems} />} />
+            </Switch>
+          </AnimatePresence>
+        )}
+        >
         </Route>
       </div>
     </Router>

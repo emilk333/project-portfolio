@@ -46,6 +46,7 @@
     }
 
     &__title {
+        position: relative;
         @include heading-type-medium;
         @include no-typography-spacing;
         color: $color-dark-blue-1;
@@ -56,6 +57,7 @@
     }
 
     &__text {
+        position: relative;
         @include text;
         padding-top: 6rem;
         color: $color-dark-blue-1;
@@ -109,6 +111,7 @@
     }
 
     &__return-button {
+        background-color: transparent;
         position: absolute;
         top: 1.5rem;
         left: -10rem;

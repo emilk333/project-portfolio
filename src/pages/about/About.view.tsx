@@ -81,10 +81,12 @@ const About = () => {
         }
     ]
 
+    const transition = { duration: 1, ease: [0.43, 0.13, 0.23, 0.96]}
+
     const renderlinkSection = () => {
         return (
             <ul className="pf-about__links">
-                    <motion.li initial={{left: '-20rem'}} animate={{left: 0}} transition={{delay: 0}} className="pf-about__link-item">
+                    <motion.li initial={{left: '-20rem'}} exit={{left: '-20rem'}} animate={{left: 0}} transition={{delay: 0}} className="pf-about__link-item">
                         <span className="pf-about__link-color-1">
                             <div className="pf-about__icon">
                                 <LocationSVG />
@@ -92,7 +94,7 @@ const About = () => {
                             {linkConfig[0].value}
                         </span>
                     </motion.li>
-                    <motion.li initial={{left: '-24rem'}} animate={{left: 0}} transition={{delay: 0.2}} className="pf-about__link-item">
+                    <motion.li initial={{left: '-24rem'}} exit={{left: '-24rem'}} animate={{left: 0}} transition={{delay: 0.2}} className="pf-about__link-item">
                         <a className="pf-about__link-color-2" href={`mailto:${linkConfig[1].value}`} target="_blank">
                             <div className="pf-about__icon">
                                 <MailSVG />
@@ -100,7 +102,7 @@ const About = () => {
                             {linkConfig[1].value}
                         </a>
                     </motion.li>
-                    <motion.li  initial={{left: '-28rem'}} animate={{left: 0}} transition={{delay: 0.4}} className="pf-about__link-item">
+                    <motion.li  initial={{left: '-28rem'}} exit={{left: '-28rem'}} animate={{left: 0}} transition={{delay: 0.4}} className="pf-about__link-item">
                         <a className="pf-about__link-color-3" href={linkConfig[2].url} target="_blank">
                             <div className="pf-about__icon">
                                 <LinkedinSVG />
@@ -117,9 +119,9 @@ const About = () => {
     }
 
     return (
-        <motion.div initial={{opacity : 0}} animate={{opacity : 1}} transition={{duration : 0.8}} exit="exit" className="pf-about mobile-spacing">
+        <motion.div initial={{opacity : 0}} animate={{opacity : 1}} transition={{duration : 0.8}} exit={{opacity : 0}} className="pf-about mobile-spacing">
             <section className="pf-about__wrapper">
-                <motion.button initial={{left: '-30rem'}} animate={{left: '-10rem'}} transition={{delay: 0.5}} onClick={goBackInHistory} className="pf-button pf-button--no-styling pf-about__return-button">
+                <motion.button initial={{left: '-30rem'}} exit={{left: '-30rem'}} animate={{left: '-10rem'}} transition={{delay: 0.5}} onClick={goBackInHistory} className="pf-button pf-button--no-styling pf-about__return-button">
                     <div className="pf-about__arrow">
                         <ArrowSVG/>
                     </div>
@@ -128,8 +130,8 @@ const About = () => {
                     {renderlinkSection()}
                 <div className="pf-shapes__line pf-shapes__line--large-space"></div>
                 <section>
-                    <h1 className="pf-about__title">More about me</h1>
-                    <p className="pf-about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.</p>
+                    <motion.h1 initial={{left:'10rem', opacity: 0}} animate={{left:'0rem', opacity:1}} exit={{left:'10rem', opacity: 0}} transition={transition} className="pf-about__title">More about me</motion.h1>
+                    <motion.p initial={{left:'20rem', opacity: 0}} animate={{left:'0rem', opacity:1}} exit={{left:'20rem', opacity: 0}}  transition={transition} className="pf-about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.</motion.p>
                 </section>
             </section>
             <div className="pf-shapes__line pf-shapes__line--small-space"></div>

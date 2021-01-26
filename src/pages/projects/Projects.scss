@@ -9,7 +9,7 @@
     max-height: calc(100vh + 2px);
     align-items: center;
     justify-content: center;
-    padding-bottom: 10rem;
+    padding-bottom: 2rem;
 
     &__container {
         width: 100%;
@@ -22,6 +22,7 @@
     }
 
     &__info-wrapper {
+        z-index: 5;
         padding-left: 8.5rem;
         padding-top: 11rem;
         position: relative;
@@ -34,26 +35,27 @@
     }
 
     &__thumbnail-container {
+        z-index: 10;
         height: 35rem;
         width: 24rem;
         position: relative;
         overflow: hidden;
         border-radius: 2rem;
         top: -5rem;
-        box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+        box-shadow: #9243fd47 0px 18px 50px -10px;
     }
 
     &__thumbnail {
         background-color: $color-light-grey;
-        background-position: left;
+        background-position-x: center;
+        background-position-y: top;
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
-        height: calc(100vh + 2px);
+        height: 100vh;
         transition: all 0.25s cubic-bezier(0.43, 0.13, 0.23, 0.96);
 
         &:hover {
-            transform: scale(1.04);
 
             .pf-project-item__id {
                 font-size: 5rem;
@@ -72,7 +74,7 @@
     .pf-shapes__line--small-space {
         left: -26rem;
         position: relative;
-        top: -4.5rem;
+        top: -7.5rem;
     }
 
     &__title-container {
@@ -80,7 +82,7 @@
         align-items: center;
         width: 100%;
         height: 3rem;
-        position: absolute;
+        position: relative;
         left: 0;
         z-index: 2;
     }
@@ -117,8 +119,9 @@
 
         &--details {
             font-size: 12rem;
-            right: -9.5rem;
-            top: -6.7rem;
+            //right: -10.5rem;
+            top: -4rem;
+            transform: rotate(90deg);
 
             @media only screen and (max-width: $phone) {
                 font-size: 6rem;
@@ -157,8 +160,8 @@
     }
 
     &__dot-4 {
-        left: -45rem;
-        bottom: 26rem;
+        left: -42rem;
+        bottom: 11rem;
 
         @media only screen and (max-width: $phone) {
             left: 20rem;

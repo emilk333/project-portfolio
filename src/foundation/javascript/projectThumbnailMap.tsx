@@ -1,6 +1,6 @@
 import React from 'react'
 import furniture from '../../assets/images/furniture-bg-1.png'
-import solarbase from '../../assets/images/solarbase-bg-1.png'
+import solarbase from '../../assets/images/solarbase-bg-2.png'
 import futurenow from '../../assets/images/futurenow-bg-1.png'
 import fightiq from '../../assets/images/fightiq-bg-1.png'
 import vip from '../../assets/images/vip-bg-1.png'
@@ -20,6 +20,7 @@ interface IthumbnailDictionary {
 const projectThumbnailMap = ({ img }: any): JSX.Element => {
 
     let returnImage: JSX.Element
+    const transitionSlow = { duration: 0.25, ease: [0.43, 0.13, 0.23, 0.96]}
 
     const thumbnailDictionary: IthumbnailDictionary = {
         furniture: furniture,
@@ -30,7 +31,12 @@ const projectThumbnailMap = ({ img }: any): JSX.Element => {
         todoList: todoList
     }
 
-    img ? returnImage = <LazyLoad height={200}><motion.div initial={{opacity : 0}} animate={{opacity: 1}} transition={{duration : 0.8}}  className="pf-project-item__thumbnail" style={{ backgroundImage: `url(${thumbnailDictionary[img as keyof IthumbnailDictionary]})` }}></motion.div></LazyLoad> : <div></div>
+    img ? returnImage = <LazyLoad height={200}><motion.div 
+                                whileHover={{scale: 1.04}} 
+                                transition={transitionSlow} 
+                                className="pf-project-item__thumbnail" 
+                                style={{ backgroundImage: `url(${thumbnailDictionary[img as keyof IthumbnailDictionary]})` }}></motion.div>
+                        </LazyLoad> : <div></div>
     return returnImage
 }
 
