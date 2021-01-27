@@ -10,23 +10,21 @@ const ProjectDetails = ({ portfolioItemsData, match }: any) => {
     const Components:any = {
         type1: DynamicImageCompType1,
         type2: DynamicImageCompType2
-      };
+    }
       
-      const dynamicComponent = (block:any) => {
-          console.log(block)
-        // component does exist
-        if (typeof Components[block.component] !== "undefined") {
-          return React.createElement(Components[block.component], {
+    const dynamicComponent = (block:any) => {
+
+    if (typeof Components[block.component] !== "undefined") {
+        return React.createElement(Components[block.component], {
             key: block._uid,
             block: block
-          });
-        }
-        // component doesn't exist yet
-        return React.createElement(
-          () => <div>The component {block.component} has not been created yet.</div>,
-          { key: block._uid }
-        );
-      }
+        })
+    }
+    
+    return React.createElement(() => 
+        <div>The component {block.component} has not been created yet.</div>,
+        { key: block._uid })
+    }
     
     const clickedProject = portfolioItemsData.find((item: any) => item.id === match.params.projectId)
     const transition = { duration: 1, ease: [0.43, 0.13, 0.23, 0.96]}
@@ -75,15 +73,6 @@ const ProjectDetails = ({ portfolioItemsData, match }: any) => {
                 </div>
             </section>
             <section className="pf-project-details__project-image-container">
-                {/* {clickedProject.images.image1 ? <div className="pf-project-details__project-image-wrapper pf-project-details__project-image-wrapper--size-1">
-                    <ProjectImageMap img={clickedProject.images.image1} />
-                </div> : null}
-                {clickedProject.images.image2 ? <div className="pf-project-details__project-image-wrapper pf-project-details__project-image-wrapper--size-1">
-                    <ProjectImageMap img={clickedProject.images.image2} />
-                </div> : null}
-                {clickedProject.images.image3 ? <div className="pf-project-details__project-image-wrapper pf-project-details__project-image-wrapper--size-2">
-                    <ProjectImageMap img={clickedProject.images.image3} />
-                </div> : null} */}
                 {clickedProject.images.map((block:any) => dynamicComponent(block))}
             </section>
         </motion.div>

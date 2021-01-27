@@ -50,7 +50,7 @@ const App = () => {
         },
         {
           _uid: "3",
-          component: "type2",
+          component: "type1",
           image: "solarBase3",
         }
       ]
@@ -77,18 +77,18 @@ const App = () => {
       images: [
         {
           _uid: "1",
-          component: "type1",
-          image: "moonshine1",
+          component: "type2",
+          image: [ "moonshine1", "moonshine2" ]
         },
         {
           _uid: "2",
-          component: "type1",
-          image: "moonshine2",
+          component: "type2",
+          image: []
         },
         {
           _uid: "3",
           component: "type2",
-          image: "moonshine3",
+          image: []
         }
       ]
     },

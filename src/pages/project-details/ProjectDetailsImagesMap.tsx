@@ -33,9 +33,9 @@ interface IimageDictionary {
 }
 
 const projectDetailsImageMap = ({ img }: any): JSX.Element => {
-    
+    if (!img) return <div></div>
     let returnImage: JSX.Element
-
+    
     const imageDictionary: IimageDictionary = {
         solarBase1: solarBase1,
         solarBase2: solarBase2,
