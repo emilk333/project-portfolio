@@ -37,11 +37,23 @@ const App = () => {
           name: "Adobe Photoshop"
         }
       ],
-      images: {
-        image1: "solarBase1",
-        image2: "solarBase2",
-        image3: "solarBase3",
-      }
+      images: [
+        {
+          _uid: "1",
+          component: "type1",
+          image: "solarBase1",
+        },
+        {
+          _uid: "2",
+          component: "type1",
+          image: "solarBase2",
+        },
+        {
+          _uid: "3",
+          component: "type2",
+          image: "solarBase3",
+        }
+      ]
     },
     {
       title: "Moonshine Furniture",
@@ -62,11 +74,23 @@ const App = () => {
           name: "Adobe Photoshop"
         }
       ],
-      images: {
-        image1: "moonshine1",
-        image2: "moonshine2",
-        image3: "moonshine3",
-      }
+      images: [
+        {
+          _uid: "1",
+          component: "type1",
+          image: "moonshine1",
+        },
+        {
+          _uid: "2",
+          component: "type1",
+          image: "moonshine2",
+        },
+        {
+          _uid: "3",
+          component: "type2",
+          image: "moonshine3",
+        }
+      ]
     },
     {
       title: "Futurenow.",
@@ -83,7 +107,7 @@ const App = () => {
           name: "Adobe experience design"
         }
       ],
-      images: {}
+      images: []
     },
     {
       title: "Fightiq.",
@@ -108,7 +132,7 @@ const App = () => {
           name: "Flask Webapp (Python)"
         }
       ],
-      images: {}
+      images: []
     },
     {
       title: "VIP.",
@@ -125,7 +149,7 @@ const App = () => {
           name: "Adobe experience design"
         }
       ],
-      images: {}
+      images: []
     },
     {
       title: "Todolist.",
@@ -146,7 +170,7 @@ const App = () => {
           name: "Angular 4"
         }
       ],
-      images: {}
+      images: []
     }
   ]
 
