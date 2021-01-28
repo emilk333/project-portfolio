@@ -51,8 +51,8 @@ const projectDetailsImageMap = ({ img }: any): JSX.Element => {
         moonshine9: moonshine9,
     }   
 
-    img ? returnImage = <LazyLoad height={200}><motion.img src={imageDictionary[img as keyof IimageDictionary]} alt={`${imageDictionary[img as keyof IimageDictionary]}`} className="pf-project-details__project-image"></motion.img>
-                        </LazyLoad> : <div></div>
+    img ? returnImage = <motion.img src={imageDictionary[img as keyof IimageDictionary]} alt={`${imageDictionary[img as keyof IimageDictionary]}`} className="pf-project-details__project-image"></motion.img>
+                        : <div></div>
     return returnImage
 }
 

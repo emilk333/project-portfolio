@@ -105,37 +105,19 @@
     }
 
     &__project-image {
-        min-width: 40vw;
-        max-width: 85rem;
         height: auto;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
         border-radius: 0.8rem;
     }
 
     &__project-image-container {
-        & div:first-child {
-            padding-top: 10rem;
-        }
+        
+        // & div:first-child {
+        //     padding-top: 10rem;
+        // }
 
-        & div:last-child {
-            padding-bottom: 10rem;
-        }
-    }
-
-    &__project-image-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $image-background-color;
-
-        &--size-1 {
-            width: 100%;
-            height: 60rem;
-        }
-
-        &--size-2 {
-            width: 100%;
-            min-height: 200rem;
-        }
+        // & div:last-child {
+        //     padding-bottom: 10rem;
+        // }
     }
 }

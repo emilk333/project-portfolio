@@ -78,7 +78,14 @@ const App = () => {
         {
           _uid: "1",
           component: "type2",
-          image: [ "moonshine1", "moonshine2" ]
+          image: [{
+            imageId: "moonshine1",
+            composition: "desktop"
+          },
+          {
+            imageId: "moonshine2",
+            composition: "mobile"
+          }]
         },
         {
           _uid: "2",
