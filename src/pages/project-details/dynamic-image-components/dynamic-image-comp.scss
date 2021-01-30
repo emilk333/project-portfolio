@@ -1,32 +1,57 @@
 
 .pf-dynamic-image-component {
+    &__type-1 {
+        .pf-dynamic-image-component__project-image-wrapper {
+            &--desktop {            
+                width: 100%;
+                justify-content: center;
+
+                img {
+                    width: 90rem;
+                }
+            }
+
+            &--mobile {
+                width: 35%;
+                justify-content: flex-start;
+
+                img {
+                    width: 18.5rem;
+                }
+            }
+        }
+    }
+
     &__type-2 {
         display: flex;
+
+        .pf-dynamic-image-component__project-image-wrapper {
+            &--desktop {            
+                width: 65%;
+                justify-content: flex-end;
+                padding-right: 10rem;
+    
+                img {
+                    width: 70rem;
+                }
+            }
+    
+            &--mobile {
+                width: 35%;
+                justify-content: flex-start;
+    
+                img {
+                    width: 18.5rem;
+                }
+            }
+        }
     }
 
     &__project-image-wrapper {
-        padding-top: 10rem;
+        padding-top: 15rem;
+        padding-bottom: 5rem;
         display: flex;
         align-items: flex-start;
         background-color: $image-background-color;
-
-        &--desktop {            
-            width: 65%;
-            justify-content: flex-end;
-            padding-right: 10rem;
-
-            img {
-                width: 70rem;
-            }
-        }
-
-        &--mobile {
-            width: 35%;
-            justify-content: flex-start;
-
-            img {
-                width: 25rem;
-            }
-        }
     }
 }

@@ -41,18 +41,21 @@ const App = () => {
         {
           _uid: "1",
           component: "type1",
-          image: "solarBase1",
+          image: [
+            {
+              imageId: "solarBase3",
+              composition: "desktop"
+            },
+            {
+              imageId: "solarBase1",
+              composition: "desktop"
+            },
+            {
+              imageId: "solarBase2",
+              composition: "desktop"
+            }
+          ]
         },
-        {
-          _uid: "2",
-          component: "type1",
-          image: "solarBase2",
-        },
-        {
-          _uid: "3",
-          component: "type1",
-          image: "solarBase3",
-        }
       ]
     },
     {
@@ -78,24 +81,58 @@ const App = () => {
         {
           _uid: "1",
           component: "type2",
-          image: [{
-            imageId: "moonshine1",
-            composition: "desktop"
-          },
-          {
-            imageId: "moonshine2",
-            composition: "mobile"
-          }]
+          image: [
+            {
+              imageId: "moonshine1",
+              composition: "desktop"
+            },
+            {
+              imageId: "moonshine2",
+              composition: "mobile"
+            }
+          ]
         },
         {
           _uid: "2",
           component: "type2",
-          image: []
+          image: [
+            {
+              imageId: "moonshine3",
+              composition: "desktop"
+            },
+            {
+              imageId: "moonshine4",
+              composition: "mobile"
+            }
+          ]
         },
         {
-          _uid: "3",
+          _uid: "2",
           component: "type2",
-          image: []
+          image: [
+            {
+              imageId: "moonshine5",
+              composition: "desktop"
+            },
+            {
+              imageId: "moonshine6",
+              composition: "mobile"
+            }
+          ]
+        },
+        {
+          _uid: "2",
+          component: "type2",
+          image: [
+            {
+              imageId: "moonshine8",
+              composition: "desktop"
+            },
+            {
+              imageId: "moonshine9",
+              composition: "mobile"
+            }
+          ]
         }
       ]
     },
@@ -114,7 +151,26 @@ const App = () => {
           name: "Adobe experience design"
         }
       ],
-      images: []
+      images: [
+        {
+          _uid: "3",
+          component: "type1",
+          image: [
+            {
+              imageId: "futurenow2",
+              composition: "desktop"
+            },
+            {
+              imageId: "futurenow3",
+              composition: "desktop"
+            },
+            {
+              imageId: "futurenow1",
+              composition: "desktop"
+            }
+          ]
+        }
+      ]
     },
     {
       title: "Fightiq.",
@@ -156,7 +212,30 @@ const App = () => {
           name: "Adobe experience design"
         }
       ],
-      images: []
+      images: [
+        {
+          _uid: "4",
+          component: "type1",
+          image: [
+            {
+              imageId: "vip1",
+              composition: "desktop"
+            },
+            {
+              imageId: "vip2",
+              composition: "desktop"
+            },
+            {
+              imageId: "vip3",
+              composition: "desktop"
+            },
+            {
+              imageId: "vip4",
+              composition: "desktop"
+            }
+          ]
+        }
+      ]
     },
     {
       title: "Todolist.",
