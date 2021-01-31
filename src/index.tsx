@@ -256,7 +256,18 @@ const App = () => {
           name: "Angular 4"
         }
       ],
-      images: []
+      images: [
+        {
+          _uid: "6",
+          component: "type1",
+          image: [
+            {
+              imageId: "todo1",
+              composition: "desktop"
+            }
+          ]
+        }
+      ]
     }
   ]
 

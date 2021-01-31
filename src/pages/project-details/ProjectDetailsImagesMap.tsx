@@ -21,6 +21,9 @@ import vip1 from '../../assets/images/vip/vip-image-1.png'
 import vip2 from '../../assets/images/vip/vip-image-2.png'
 import vip3 from '../../assets/images/vip/vip-image-3.png'
 import vip4 from '../../assets/images/vip/vip-image-4.png'
+
+import todo1 from '../../assets/images/todo/todo_all_mockup.png'
+
 import {motion} from 'framer-motion'
 
 interface IimageDictionary {
@@ -43,7 +46,7 @@ interface IimageDictionary {
     vip2: string,
     vip3: string,
     vip4: string,
-
+    todo1: string,
 }
 
 const projectDetailsImageMap = ({ img }: any): JSX.Element => {
@@ -70,6 +73,7 @@ const projectDetailsImageMap = ({ img }: any): JSX.Element => {
         vip2: vip2,
         vip3: vip3,
         vip4: vip4,
+        todo1: todo1,
     }   
 
     img ? returnImage = <motion.img src={imageDictionary[img as keyof IimageDictionary]} alt={`${imageDictionary[img as keyof IimageDictionary]}`} className="pf-project-details__project-image"></motion.img>

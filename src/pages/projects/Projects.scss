@@ -87,10 +87,6 @@
         z-index: 2;
     }
 
-    &__title-wrapper {
-        position: relative;
-    }
-
     &__title {
         @include heading-type-small;
         @include no-typography-spacing;
@@ -103,6 +99,10 @@
                 font-size: 2.8rem;
             }
         }
+    }
+
+    &__title-wrapper {
+        position: relative;
     }
 
     &__id {
@@ -119,9 +119,10 @@
 
         &--details {
             font-size: 12rem;
-            left: 0;
             width: 100%;
-            top: -4rem;
+            left: -28.5rem;
+            top: 22rem;
+            opacity: 0.06;
             transform: rotate(90deg);
 
             @media only screen and (max-width: $phone) {

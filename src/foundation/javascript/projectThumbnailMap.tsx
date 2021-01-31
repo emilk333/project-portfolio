@@ -4,7 +4,7 @@ import solarbase from '../../assets/images/solarbase/solarbase-bg-2.png'
 import futurenow from '../../assets/images/futurenow/futurenow-bg-1.png'
 import fightiq from '../../assets/images/fightiq-bg-1.png'
 import vip from '../../assets/images/vip/vip-bg-1.png'
-import todoList from '../../assets/images/todoList-bg-1.png'
+import todoList from '../../assets/images/todo/todoList-bg-1.png'
 import LazyLoad from 'react-lazyload'
 import {motion} from 'framer-motion'
 

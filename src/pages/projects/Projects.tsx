@@ -25,22 +25,22 @@ const Projects = ({ portfolioItems }: any) => {
       <motion.article className="pf-project-item">
         <div className="pf-project-item__container">
           <Link to={`${url}/00${index + 1}`}>
-            <motion.div exit={{width:'100vw', height: '100vh', borderRadius:'0rem'}} transition={transition} className="pf-project-item__thumbnail-container" style={{boxShadow: item.shadow}}>
+            <motion.div exit={{width:'0rem', opacity: 0}} transition={transition} className="pf-project-item__thumbnail-container" style={{boxShadow: item.shadow}}>
               <motion.div exit={{top:'100vh'}} style={{position:"relative"}} transition={{delay: 0.8, duration: 0.6, ease: 'easeInOut'}}>
                 <ProjectThumbnailMap img={item.thumbnail} />
               </motion.div>
             </motion.div>
           </Link>
-          <motion.section exit={{width:'1px', opacity: 0, paddingLeft: '1px'}} transition={transition2} className="pf-project-item__info-wrapper">
+          <motion.section exit={{opacity: 0 }} transition={transition2} className="pf-project-item__info-wrapper">
             <div className="pf-shapes__dot pf-project-item__dot-1"></div>
             <div className="pf-shapes__dot pf-project-item__dot-3"></div>
             <div className="pf-shapes__dot pf-project-item__dot-4"></div>
             <motion.div initial={{left:'0rem'}} animate={{left:'-8.5rem'}} className="pf-project-item__title-container">
               <div className="pf-shapes__line pf-shapes__line--no-left-space"></div>
-              <div className="pf-project-item__title-wrapper">
+              <motion.div exit={{left: '15rem' }} transition={transition2}  className="pf-project-item__title-wrapper">
                 <h1 className="pf-project-item__title">{item.title}</h1>
                 <h2 className="pf-project-item__id">{item.id}</h2>
-              </div>
+              </motion.div>
               <div className="pf-shapes__dot pf-project-item__dot-2"></div>
             </motion.div>
             <ProjectDescriptionBar type={item.type} year={item.year} association={item.association} flipped={true} />
